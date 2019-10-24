@@ -72,6 +72,7 @@ cover:
     - name: 项目
       icon: fas fa-code-branch
       url: projects/
+      color: #FFFFFF
     - name: 归档
       icon: fas fa-archive
       url: blog/archives/
