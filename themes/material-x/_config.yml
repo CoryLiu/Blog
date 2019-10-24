@@ -68,6 +68,7 @@ cover:
     - name: 博文
       icon: fas fa-rss
       url: /
+      color: #FFFFFF
     - name: 项目
       icon: fas fa-code-branch
       url: projects/
