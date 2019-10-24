@@ -50,7 +50,7 @@ backstretch:
   duration: 6000 # 持续时间（毫秒）
   fade: 2500     # 渐变（毫秒）
   images:
-    - https://cdn.jsdelivr.net/gh/CoryLiu/Img-repo@master/static_files/lyb/img/avatarbg.jpg
+    - https://cdn.jsdelivr.net/gh/CoryLiu/Img-repo@master/static_files/lyb/img/avatarbg1.jpg
 
 
 
@@ -65,7 +65,7 @@ cover:
   # search_placeholder: '搜索'
   # 主页封面菜单
   features:
-    - name: 博文
+    - name: 文章
       icon: fas fa-rss
       url: /
     - name: 项目
