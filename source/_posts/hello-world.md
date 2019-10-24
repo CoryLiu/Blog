@@ -2,6 +2,7 @@
 title: Hello World
 categories:
 - Coding
+- Hexo
 tags:
 - Hexo
 ---
