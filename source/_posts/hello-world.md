@@ -1,5 +1,7 @@
 ---
 title: Hello World
+type:
+- projects
 categories:
 - Coding
 - Hexo
