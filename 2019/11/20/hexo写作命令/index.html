@@ -378,7 +378,27 @@
     <section class="article typo">
       <div class="article-entry" itemprop="articleBody">
         <h1 id="新建文章"><a href="#新建文章" class="headerlink" title="新建文章"></a><strong>新建文章</strong></h1><p><code>hexo new [layout] &lt;title&gt;</code><br>layout : 默认为<code>post</code>，可以修改<code>_config.yml</code>中的<code>default_layout</code>参数来指定默认布局  </p>
-<h1 id="布局（Layout）"><a href="#布局（Layout）" class="headerlink" title="布局（Layout）"></a><strong>布局（Layout）</strong></h1><p>Hexo 有三种默认布局：<code>post</code>、<code>page</code> 和 <code>draft</code>。在创建这三种不同类型的文件时，它们将会被保存到不同的路径；而您自定义的其他布局和 <code>post</code> 相同，都将存储到 <code>source/_posts</code> 文件夹中。<br><strong>布局</strong>|<strong>路径</strong><br>——–|——–<br><code>post</code>|<code>source/_posts</code><br><code>page</code>|<code>source</code><br><code>draft</code>|<code>source/_drafts</code></p>
+<h1 id="布局（Layout）"><a href="#布局（Layout）" class="headerlink" title="布局（Layout）"></a><strong>布局（Layout）</strong></h1><p>Hexo 有三种默认布局：<code>post</code>、<code>page</code> 和 <code>draft</code>。在创建这三种不同类型的文件时，它们将会被保存到不同的路径；而您自定义的其他布局和 <code>post</code> 相同，都将存储到 <code>source/_posts</code> 文件夹中。  </p>
+<table>
+<thead>
+<tr>
+<th><strong>布局</strong></th>
+<th><strong>路径</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>post</code></td>
+<td><code>source/_posts</code></td>
+</tr>
+<tr>
+<td><code>page</code></td>
+<td><code>source</code></td>
+</tr>
+<tr>
+<td><code>draft</code></td>
+<td><code>source/_drafts</code></td>
+</tr>
+</tbody></table>
 <blockquote>
 <p>如果不希望文章被处理，可以将 Front-Matter 中的 <code>layout:</code> 设为 <code>false</code>。</p>
 </blockquote>
@@ -393,7 +413,7 @@
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2019-11-20T05:40:41+00:00">
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2019-11-20T05:44:53+00:00">
   <a class='notlink'>
     <i class="fas fa-clock" aria-hidden="true"></i>
     <p>更新于 2019年11月20日</p>
