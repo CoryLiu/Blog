@@ -3,13 +3,13 @@ title: ES6箭头函数
 date: 2019-11-25 13:57:41
 tags:
 
-* ES6
-* 箭头函数
+- ES6
+- 箭头函数
 
 categories:
 
-* Coding
-* javascript
+- Coding
+- javascript
 
 ---
 
