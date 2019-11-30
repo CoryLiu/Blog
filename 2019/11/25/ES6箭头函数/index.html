@@ -25,7 +25,7 @@
   
 
   
-  <link rel="shortcut icon" type='image/x-icon' href="https://cdn.jsdelivr.net/gh/xaoxuu/assets@master/favicon/favicon.ico">
+  <link rel="shortcut icon" type='image/x-icon' href="https://cdn.jsdelivr.net/gh/CoryLiu/Img-repo@master/static_files/lyb/img/avatarfavicon-32x32.png">
   
 
   
@@ -377,9 +377,10 @@
 
     <section class="article typo">
       <div class="article-entry" itemprop="articleBody">
-        <h2 id="箭头函数"><a href="#箭头函数" class="headerlink" title="箭头函数"></a>箭头函数</h2><hr>
-<h2 id="基本用法"><a href="#基本用法" class="headerlink" title="基本用法"></a>基本用法</h2><p>ES6允许使用“箭头”（ <code>=&gt;</code> ）定义函数。</p>
+        <h2 id="基本用法"><a href="#基本用法" class="headerlink" title="基本用法"></a>基本用法</h2><p>ES6允许使用“箭头”（ <code>=&gt;</code> ）定义函数。</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> f = <span class="function"><span class="params">v</span> =&gt;</span> v;</span><br><span class="line"></span><br><span class="line"><span class="comment">//等同于</span></span><br><span class="line"><span class="keyword">var</span> f = <span class="function"><span class="keyword">function</span>(<span class="params">v</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> v;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<a id="more"></a>
 
 <p>如果箭头函数不需要参数或需要多个参数，就使用一个圆括号代表参数的部分。</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> f = <span class="function"><span class="params">()</span> =&gt;</span> <span class="number">5</span>;</span><br><span class="line"><span class="comment">//等同于</span></span><br><span class="line"><span class="keyword">var</span> f = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">5</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> sum = <span class="function">(<span class="params">num1, num2</span>) =&gt;</span> num1 + num2;</span><br><span class="line"><span class="comment">//等同于</span></span><br><span class="line"><span class="keyword">var</span> sum = <span class="function"><span class="keyword">function</span>(<span class="params">num1, num2</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> num1 + num2;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -428,10 +429,10 @@
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2019-11-28T01:56:07+00:00">
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2019-11-30T03:01:55+00:00">
   <a class='notlink'>
     <i class="fas fa-clock" aria-hidden="true"></i>
-    <p>更新于 2019年11月28日</p>
+    <p>更新于 2019年11月30日</p>
   </a>
 </div>
 
@@ -453,7 +454,8 @@
       
         <a class="-mob-share-qq" title="QQ好友" rel="external nofollow noopener noreferrer"
           
-          href="http://connect.qq.com/widget/shareqq/index.html?url=https://coryliu.github.io/Blog/2019/11/25/ES6%E7%AE%AD%E5%A4%B4%E5%87%BD%E6%95%B0/&title=ES6箭头函数 | 阿b的Blog&pics=https://cdn.jsdelivr.net/gh/CoryLiu/Img-repo@master/static_files/lyb/img/avatar微信图片_20191024112842.png&summary="
+          href="http://connect.qq.com/widget/shareqq/index.html?url=https://coryliu.github.io/Blog/2019/11/25/ES6%E7%AE%AD%E5%A4%B4%E5%87%BD%E6%95%B0/&title=ES6箭头函数 | 阿b的Blog&pics=https://cdn.jsdelivr.net/gh/CoryLiu/Img-repo@master/static_files/lyb/img/avatar微信图片_20191024112842.png&summary=基本用法ES6允许使用“箭头”（ =&gt; ）定义函数。
+123456var f = v =&gt; v;//等同于var f = function(v) &#123;    return v;&#125;;"
           
           >
           
@@ -465,7 +467,8 @@
       
         <a class="-mob-share-qzone" title="QQ空间" rel="external nofollow noopener noreferrer"
           
-          href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://coryliu.github.io/Blog/2019/11/25/ES6%E7%AE%AD%E5%A4%B4%E5%87%BD%E6%95%B0/&title=ES6箭头函数 | 阿b的Blog&pics=https://cdn.jsdelivr.net/gh/CoryLiu/Img-repo@master/static_files/lyb/img/avatar微信图片_20191024112842.png&summary="
+          href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://coryliu.github.io/Blog/2019/11/25/ES6%E7%AE%AD%E5%A4%B4%E5%87%BD%E6%95%B0/&title=ES6箭头函数 | 阿b的Blog&pics=https://cdn.jsdelivr.net/gh/CoryLiu/Img-repo@master/static_files/lyb/img/avatar微信图片_20191024112842.png&summary=基本用法ES6允许使用“箭头”（ =&gt; ）定义函数。
+123456var f = v =&gt; v;//等同于var f = function(v) &#123;    return v;&#125;;"
           
           >
           
@@ -477,7 +480,8 @@
       
         <a class="-mob-share-weibo" title="微博" rel="external nofollow noopener noreferrer"
           
-          href="http://service.weibo.com/share/share.php?url=https://coryliu.github.io/Blog/2019/11/25/ES6%E7%AE%AD%E5%A4%B4%E5%87%BD%E6%95%B0/&title=ES6箭头函数 | 阿b的Blog&pics=https://cdn.jsdelivr.net/gh/CoryLiu/Img-repo@master/static_files/lyb/img/avatar微信图片_20191024112842.png&summary="
+          href="http://service.weibo.com/share/share.php?url=https://coryliu.github.io/Blog/2019/11/25/ES6%E7%AE%AD%E5%A4%B4%E5%87%BD%E6%95%B0/&title=ES6箭头函数 | 阿b的Blog&pics=https://cdn.jsdelivr.net/gh/CoryLiu/Img-repo@master/static_files/lyb/img/avatar微信图片_20191024112842.png&summary=基本用法ES6允许使用“箭头”（ =&gt; ）定义函数。
+123456var f = v =&gt; v;//等同于var f = function(v) &#123;    return v;&#125;;"
           
           >
           
@@ -576,7 +580,7 @@
 </header>
 
     <div class='content pure'>
-      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#箭头函数"><span class="toc-text">箭头函数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#基本用法"><span class="toc-text">基本用法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#使用注意点"><span class="toc-text">使用注意点</span></a></li></ol>
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#基本用法"><span class="toc-text">基本用法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#使用注意点"><span class="toc-text">使用注意点</span></a></li></ol>
     </div>
   </section>
 
