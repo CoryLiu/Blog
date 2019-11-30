@@ -31,3 +31,5 @@ Hexo 有三种默认布局：`post`、`page` 和 `draft`。在创建这三种不
 ``` bash
 $ hexo server
 ```
+
+<!--more-->
