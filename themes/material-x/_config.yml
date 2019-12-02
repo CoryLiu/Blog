@@ -83,8 +83,8 @@ cover:
 
 # 桌面端导航栏菜单
 menu_desktop:
-  - name: 示例
-    icon: fas fa-grin
+  - name: 首页
+    icon: fas fa-home
     url: /
   - name: 分类
     icon: fas fa-folder-open
