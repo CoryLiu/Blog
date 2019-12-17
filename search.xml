@@ -4,6 +4,37 @@
   
     
     <entry>
+      <title>JavaScript之call()与apply()</title>
+      <link href="/Blog/2019/12/09/JavaScript%E4%B9%8Bcall/"/>
+      <url>/Blog/2019/12/09/JavaScript%E4%B9%8Bcall/</url>
+      
+        <content type="html"><![CDATA[<h2 id="Function-prototype-call"><a href="#Function-prototype-call" class="headerlink" title="Function.prototype.call()"></a>Function.prototype.call()</h2><p><code>call</code>方法使用一个指定的<code>this</code>值和单独给出的一个或多个参数来调用一个函数。</p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Product</span>(<span class="params">name, price</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">this</span>.name = name;</span><br><span class="line">  <span class="keyword">this</span>.price = price;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Food</span>(<span class="params">name, price</span>) </span>&#123;</span><br><span class="line">  Product.call(<span class="keyword">this</span>, name, price);</span><br><span class="line">    <span class="comment">/* </span></span><br><span class="line"><span class="comment">        错误写法： Product(name,price) 相当于 Product.call(null,name,price)，</span></span><br><span class="line"><span class="comment">        非严格模式下，null或者undefined会自动替换为指向全局对象，如果在浏览器下则是</span></span><br><span class="line"><span class="comment">        window ，所以相当于Product.call(window,name,price)</span></span><br><span class="line"><span class="comment">    */</span></span><br><span class="line">  <span class="keyword">this</span>.category = <span class="string">'food'</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(<span class="keyword">new</span> Food(<span class="string">'cheese'</span>, <span class="number">5</span>));</span><br><span class="line"><span class="comment">// 结果: Food &#123;name: "cheese", price: 5, category: "food"&#125;</span></span><br></pre></td></tr></table></figure><blockquote><p><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/call" target="_blank" rel="noopener">MDN 文档 call</a></p></blockquote><h2 id="Function-prototype-apply"><a href="#Function-prototype-apply" class="headerlink" title="Function.prototype.apply()"></a>Function.prototype.apply()</h2><p><code>apply()</code> 方法调用一个具有给定<code>this</code>值的函数，以及作为一个数组（或类似数组对象）提供的参数。</p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> numbers = [<span class="number">5</span>, <span class="number">6</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">7</span>];</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> max = <span class="built_in">Math</span>.max.apply(<span class="literal">null</span>, numbers);</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(max);</span><br><span class="line"><span class="comment">// expected output: 7</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> min = <span class="built_in">Math</span>.min.apply(<span class="literal">null</span>, numbers);</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(min);</span><br><span class="line"><span class="comment">// expected output: 2</span></span><br></pre></td></tr></table></figure><h3 id="备注：Math-max"><a href="#备注：Math-max" class="headerlink" title="备注：Math.max"></a>备注：Math.max</h3><p><code>max</code> 是 <code>Math</code> 的静态方法，所以直接使用：<code>Math.max()</code>,而不是创建的<code>Math</code>实例的方法(<code>Math</code>不是构造函数，通过<code>typeof(Math)</code>可以看到，<code>Math</code>是一个<code>Object</code>,没有<code>prototype</code>)。</p><h3 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h3><blockquote><p><b style="font-size:1.4em">Math.max(value1[,value2,value3,…])</b></p></blockquote><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Math</span>.max(numbers)</span><br><span class="line"><span class="comment">//运行结果 NaN</span></span><br></pre></td></tr></table></figure><p>若不使用<code>apply()</code>，运行结果为NaN，原因是相当于只提供了一个参数（numbers数组），<code>max</code>方法给定的参数无法被转换为数字，则会返回<code>NaN</code>。</p><blockquote><p><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/apply" target="_blank" rel="noopener">MDN 文档 apply</a></p></blockquote>]]></content>
+      
+      
+      <categories>
+          
+          <category> Coding </category>
+          
+          <category> JavaScript </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Coding </tag>
+            
+            <tag> JavaScript </tag>
+            
+            <tag> call </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>从npm迁移yarn</title>
       <link href="/Blog/2019/12/04/%E4%BB%8Enpm%E8%BF%81%E7%A7%BByarn/"/>
       <url>/Blog/2019/12/04/%E4%BB%8Enpm%E8%BF%81%E7%A7%BByarn/</url>
@@ -71,7 +102,7 @@
           
           <category> Coding </category>
           
-          <category> javascript </category>
+          <category> JavaScript </category>
           
       </categories>
       
