@@ -9,7 +9,7 @@ tags:
 categories:
 
 - Coding
-- javascript
+- JavaScript
 
 ---
 ## 基本用法
