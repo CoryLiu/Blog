@@ -14,6 +14,8 @@ categories:
 
 vue-cli build 打包后的项目，除了部署后预览外，也可以使用`http-server`快速预览。以下是详细说明：
 
+<!-- more -->
+
 >[项目 github 地址](https://github.com/http-party/http-server#readme)
 
 # http-server: a command-line http server
