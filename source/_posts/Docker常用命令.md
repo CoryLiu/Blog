@@ -7,6 +7,9 @@ categories:
 - Docker
 ---
 
+Docker是个好东西
+<!-- more -->
+
 ### 启动容器：
 ```bash
 $ docker run IMAGE [COMMAND] [ARG...]
@@ -29,6 +32,11 @@ $ docker inspect [容器名字，容器id]
 ### 重新启动停止的容器：
 ```bash
 $ docker start [-i] 容器名
+```
+
+### 进入容器【进入容器命令行】
+```bash
+$ docker exec -it [容器名，容器id] bash
 ```
 
 ### 删除停止的容器：
