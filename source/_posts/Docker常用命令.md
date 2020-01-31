@@ -7,7 +7,7 @@ categories:
 - Docker
 ---
 
-Docker是个好东西
+简单记录一下初学的内容
 <!-- more -->
 
 ### 启动容器：
