@@ -26,8 +26,8 @@ categories:
 2009年出现，受SASS的影响较大，但又使用CSS的语法，让大部分开发者和设计师更容易上手，在ruby社区之外支持者远超过SASS，其缺点是比起SASS来，可编程功能不够，不过优点是简单和兼容CSS，反过来也影响了SASS演变到了SCSS的时代，著名的Twitter Bootstrap就是采用LESS做底层语言的。
 
 ## 相关链接
-> [less官网](!http://lesscss.org/)
+> [less官网](http://lesscss.org/)
 
-> [sass中文网](!https://www.sass.hk/)
+> [sass中文网](https://www.sass.hk/)
 
 
