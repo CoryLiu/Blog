@@ -1,6 +1,6 @@
 ---
 title: 笔记-JavaScript判断数据类型的方法总结
-date: 2020-03-12 12:22:02
+date: 2020-03-11 12:22:02
 tags:
 - JavaScript
 categories:
