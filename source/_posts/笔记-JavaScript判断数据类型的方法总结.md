@@ -38,7 +38,8 @@ categories:
 | Symbol(ES2015新增的数据类型)                         | "symbol"    |
 | Function对象                                         | "function"  |
 | 其他任何对象                                         | "object"    |
-___
+
+
 ## 注意！！！ null
 > typeof null === 'object';
 
