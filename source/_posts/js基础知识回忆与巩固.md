@@ -100,6 +100,8 @@ var vm = new Vue({
 ```
 
 # 2：前端常见的内存泄漏问题
+## 三种类型的常见 JavaScript 内存泄漏
+
 
 # 3：vue, angular, react框架各自的优缺点
 
