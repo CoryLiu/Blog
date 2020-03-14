@@ -243,7 +243,7 @@ Object.defineProperty(Vue.prototype, '$xss', {
 })
 ```
 
-## 跨站请求伪造
+## 跨站请求伪造 CSRF
 - 攻击原理
   - 用户登录A网站
   - A网站确认身份，给客户端cookie
@@ -309,5 +309,64 @@ Object.defineProperty(Vue.prototype, '$xss', {
   - 攻击者不仅能获得双方的通信信息，还能修改通信信息。
 
 # 5：跨域的所有解决方案
+> [详细引用文章](https://segmentfault.com/a/1190000011145364)
+## 需要跨域的原因
+浏览器的 `同源策略` SOP (same orgin policy) ，是浏览器核心最基本的安全功能。   
+所谓同源是指 `"协议+域名+端口"` 三者相同，即便两个不同的域名指向同一个ip地址，也非同源。
+## 跨域解决方案
+1. jsonp
+2. document.domain + iframe跨域
+3. location.hash + iframe跨域
+4. window.name + iframe跨域
+5. postMessage跨域
+6. 跨域资源共享（CORS）
+7. nginx代理跨域
+8. nodejs 中间件代理跨域
+9. WebSocket协议跨域
+## jsonp跨域
+缺点：只能实现get请求跨域
+## iframe的三种跨域
+## postMessage跨域
+## 跨域资源共享（CORS）
+普通跨域请求：服务端设置Access-Control-Allow-Origin即可，前端无须设置，若要带cookie请求：前后端都需要设置。
+``` js
+// 前端设置是否带cookie
+withCredentials = true;
+```
+## nginx代理跨域
+nginx配置
+``` nginx
+server {
+    listen       81;
+    server_name  www.domain1.com;
+
+    location / {
+        proxy_pass   http://www.domain2.com:8080;  #反向代理
+        proxy_cookie_domain www.domain2.com www.domain1.com; #修改cookie里域名
+        index  index.html index.htm;
+
+        # 当用webpack-dev-server等中间件代理接口访问nignx时，此时无浏览器参与，故没有同源限制，下面的跨域配置可不启用
+        add_header Access-Control-Allow-Origin http://www.domain1.com;  #当前端只跨域不带cookie时，可为*
+        add_header Access-Control-Allow-Credentials true;
+    }
+}
+```
+## WebSocket协议跨域
+关键词：Scoket.io模块
 
 # 6：前端项目的性能优化
+前端项目的性能优化手段，如果都罗列出来，可以写一本书了。。。   
+暂时记录几个原则，日后在实际项目中遇到对应的情况再详细补充笔记   
+- 请求数量——合并脚本和样式表，CSS Sprites，拆分初始化负载，划分主域
+- 请求带宽——开启Gzip，精简JavaScript，移除重复脚本，图像优化
+- 缓存利用——使用CDN，使用外部JavaScript和CSS，添加Expires头，减少DNS查找，配置ETag，使Ajax可缓存
+- 页面结构——将样式表放在顶部，将脚本放在底部，尽早刷新文档的输出
+- 代码校验——避免CSS表达式，避免重定向
+
+## WebP图片格式
+## vue项目中，将小图片直接转化base64，减少请求
+## 优化项目的切入点
+- 减少客户端请求
+- 减少服务器端响应的体积（如gzip压缩）
+- 客户端优化 dom，css，js的代码加载顺序；或使用服务器端渲染，减少客户端渲染压力（vue中的 `ssr` 技术。[相关链接](https://cn.vuejs.org/v2/guide/ssr.html)）
+- 网络优化，比如增加 CDN 缓存；或增加并发处理能力，比如服务端设置多个域名，客户端使用多个域名同时请求资源，增加并发量。
