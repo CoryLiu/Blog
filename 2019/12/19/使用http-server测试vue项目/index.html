@@ -29,7 +29,9 @@
   
 
   
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/CoryLiu/cdn-blog@1.1/css/style.min.css">
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/CoryLiu/cdn-blog@1.1/css/style.min.css">
+
   
 
   <script>
@@ -40,7 +42,7 @@
 
   
   
-</head>
+<meta name="generator" content="Hexo 4.2.0"></head>
 
 <body>
   
@@ -419,7 +421,7 @@
 <li><code>404.html</code> will be served if a file is not found. This can be used for Single-Page App (SPA) hosting to serve the entry page.</li>
 </ul>
 <h2 id="Catch-all-redirect"><a href="#Catch-all-redirect" class="headerlink" title="Catch-all redirect"></a>Catch-all redirect</h2><p>To implement a catch-all redirect, use the index page itself as the proxy with:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http-server --proxy http://localhost:8080?</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http-server --proxy http:&#x2F;&#x2F;localhost:8080?</span><br></pre></td></tr></table></figure>
 
 <p>Note the <code>?</code> at the end of the proxy URL. Thanks to <a href="https://github.com/houston3" target="_blank" rel="noopener">@houston3</a> for this clever hack!</p>
 <h2 id="TLS-SSL"><a href="#TLS-SSL" class="headerlink" title="TLS/SSL"></a>TLS/SSL</h2><p>First, you need to make sure that <a href="https://github.com/openssl/openssl" target="_blank" rel="noopener">openssl</a> is installed correctly, and you have <code>key.pem</code> and <code>cert.pem</code> files. You can generate them using this command:</p>
@@ -449,7 +451,7 @@
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-03-14T11:35:25+00:00">
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-03-14T11:39:05+00:00">
   <a class='notlink'>
     <i class="fas fa-clock" aria-hidden="true"></i>
     <p>更新于 2020年3月14日</p>
@@ -496,7 +498,7 @@
       
     
       
-        <a class='qrcode' rel="external nofollow noopener noreferrer noopener" href='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAQ4AAAEOCAAAAABd2qZ5AAAD+ElEQVR42u3aS27bQBAFQN3/0g6QVYKI9HvdQ8EBiitBpoczxUWrP69XfH39vq6++ffzn9fVClf33z9r/8QDFw4cOHDgCI56v63knvvNJQdLXkb+ebZ/HDhw4MBxiiPZRBIsk8O3iElITjiSHxA4cODAgeOTHO3BkhRrQ5zsEAcOHDhw/C8cCUFyvH3C1q6DAwcOHDg+w9EmSElYzdO55K9tye/xWikOHDhw4Egj3bHGz8/5/OB8Bw4cOHDgiINZ2+CZpXl5+rd5YnQ6HDhw4MBxJlAMh5jbNG8f5luIfM1XklniwIEDB46AIy+ibdpLeTHxVDBu09E3vztw4MCBA8eCYz9M8NxA2xOp3SUQDhw4cOBYcyQjCJsglw83nGomJWf5hg8HDhw4cBzl2I+R5WW7PDlMdtUOxl0S48CBAweOQxz5orPwdr9O3ijajzi8Tj0GBw4cOHCM0p48EXpiWCF/De1Oot8dOHDgwIGj5EiCX/79PmE7FfLb1hQOHDhw4HiCow2HbRtp1lhKnpinc9+sjAMHDhw41hxJZaxNrorRgbIid2psovjRgAMHDhw4So48iZoNK+RX0RaavefgheHAgQMHjrMc+zA5K/ztfyMcG7/DgQMHDhxrjn14a0tvB+YvgvtXgRkHDhw4cCw48oGGTZtns/7+m6IoiQMHDhw4jnLMhgxmCdtsuKENwMk6OHDgwIHjLEee5My227am7p++Ga2oh+Rw4MCBA8eCY1OGa9s8bVlw/7/ty8aBAwcOHHuOJNFKguJqjCAu87VJWh7UceDAgQPHnqMt+eVb3JQO80CbPKWgxIEDBw4ca4774+UHywuCybPyRtcGGgcOHDhwPMGRp1L7zeXJYd5SatO86HcHDhw4cOBYcLRBrq07JgeeHWnW7orWx4EDBw4cC442OM22mAfUGfemufXXPThw4MCB42GOtgWVJG+nBh0269QZLQ4cOHDgiDnasJpsNB9iSzbdDijkYfXyfhw4cODAseCYjQW0/5us1r6GzTeXKDhw4MCB4yhHnqolRcB9SbE9apuCfpPR4sCBAweOBUce5GZjBHkzaTaUsAF9E2hx4MCBA8eCI19iEyBPpXB5+a9NC3HgwIEDxymOr/LKhwPaRtEscM7Wv9w/Dhw4cOBYc7QBb1aAS8Yg2lQw38OpoQocOHDgwDGrhuXHyzedt6zaO9uQHyV7OHDgwIHjEEceCPP/3ZcF8/GFV3ldouDAgQMHjg9ynArDs8PkKVm7zpsUDgcOHDhwfJCjxWqTxk2Bb9bKwoEDBw4cT3DM2kib8YXk/jw5bEuBh9tOOHDgwIFjMdCQHKBN59om1qr8V6Z8OHDgwIEj5vgFeUq5zGj8mSsAAAAASUVORK5CYII=' target="_blank">
+        <a class='qrcode' rel="external nofollow noopener noreferrer" href='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAQ4AAAEOCAAAAABd2qZ5AAAD+ElEQVR42u3aS27bQBAFQN3/0g6QVYKI9HvdQ8EBiitBpoczxUWrP69XfH39vq6++ffzn9fVClf33z9r/8QDFw4cOHDgCI56v63knvvNJQdLXkb+ebZ/HDhw4MBxiiPZRBIsk8O3iElITjiSHxA4cODAgeOTHO3BkhRrQ5zsEAcOHDhw/C8cCUFyvH3C1q6DAwcOHDg+w9EmSElYzdO55K9tye/xWikOHDhw4Egj3bHGz8/5/OB8Bw4cOHDgiINZ2+CZpXl5+rd5YnQ6HDhw4MBxJlAMh5jbNG8f5luIfM1XklniwIEDB46AIy+ibdpLeTHxVDBu09E3vztw4MCBA8eCYz9M8NxA2xOp3SUQDhw4cOBYcyQjCJsglw83nGomJWf5hg8HDhw4cBzl2I+R5WW7PDlMdtUOxl0S48CBAweOQxz5orPwdr9O3ijajzi8Tj0GBw4cOHCM0p48EXpiWCF/De1Oot8dOHDgwIGj5EiCX/79PmE7FfLb1hQOHDhw4HiCow2HbRtp1lhKnpinc9+sjAMHDhw41hxJZaxNrorRgbIid2psovjRgAMHDhw4So48iZoNK+RX0RaavefgheHAgQMHjrMc+zA5K/ztfyMcG7/DgQMHDhxrjn14a0tvB+YvgvtXgRkHDhw4cCw48oGGTZtns/7+m6IoiQMHDhw4jnLMhgxmCdtsuKENwMk6OHDgwIHjLEee5My227am7p++Ga2oh+Rw4MCBA8eCY1OGa9s8bVlw/7/ty8aBAwcOHHuOJNFKguJqjCAu87VJWh7UceDAgQPHnqMt+eVb3JQO80CbPKWgxIEDBw4ca4774+UHywuCybPyRtcGGgcOHDhwPMGRp1L7zeXJYd5SatO86HcHDhw4cOBYcLRBrq07JgeeHWnW7orWx4EDBw4cC442OM22mAfUGfemufXXPThw4MCB42GOtgWVJG+nBh0269QZLQ4cOHDgiDnasJpsNB9iSzbdDijkYfXyfhw4cODAseCYjQW0/5us1r6GzTeXKDhw4MCB4yhHnqolRcB9SbE9apuCfpPR4sCBAweOBUce5GZjBHkzaTaUsAF9E2hx4MCBA8eCI19iEyBPpXB5+a9NC3HgwIEDxymOr/LKhwPaRtEscM7Wv9w/Dhw4cOBYc7QBb1aAS8Yg2lQw38OpoQocOHDgwDGrhuXHyzedt6zaO9uQHyV7OHDgwIHjEEceCPP/3ZcF8/GFV3ldouDAgQMHjg9ynArDs8PkKVm7zpsUDgcOHDhwfJCjxWqTxk2Bb9bKwoEDBw4cT3DM2kib8YXk/jw5bEuBh9tOOHDgwIFjMdCQHKBN59om1qr8V6Z8OHDgwIEj5vgFeUq5zGj8mSsAAAAASUVORK5CYII='>
         
           <img src="https://cdn.jsdelivr.net/gh/xaoxuu/assets@19.1.9/logo/128/wechat.png">
         
@@ -624,7 +626,7 @@
 </header>
 
     <div class='content pure'>
-      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#使用http-server测试vue打包的项目"><span class="toc-text">使用http-server测试vue打包的项目</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#http-server-a-command-line-http-server"><span class="toc-text">http-server: a command-line http server</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Installing-globally"><span class="toc-text">Installing globally:</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Running-on-demand"><span class="toc-text">Running on-demand:</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Usage"><span class="toc-text">Usage:</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Available-Options"><span class="toc-text">Available Options:</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Magic-Files"><span class="toc-text">Magic Files</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Catch-all-redirect"><span class="toc-text">Catch-all redirect</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#TLS-SSL"><span class="toc-text">TLS/SSL</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Development"><span class="toc-text">Development</span></a></li></ol>
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#使用http-server测试vue打包的项目"><span class="toc-text">使用http-server测试vue打包的项目</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#http-server-a-command-line-http-server"><span class="toc-text">http-server: a command-line http server</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Installing-globally"><span class="toc-text">Installing globally:</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Running-on-demand"><span class="toc-text">Running on-demand:</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Usage"><span class="toc-text">Usage:</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Available-Options"><span class="toc-text">Available Options:</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Magic-Files"><span class="toc-text">Magic Files</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Catch-all-redirect"><span class="toc-text">Catch-all redirect</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#TLS-SSL"><span class="toc-text">TLS&#x2F;SSL</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Development"><span class="toc-text">Development</span></a></li></ol>
     </div>
   </section>
 
@@ -1234,10 +1236,14 @@
 
 
 
-  <script src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-material-x@19.9/js/app.js"></script>
+  
+<script src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-material-x@19.9/js/app.js"></script>
 
 
-  <script src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-material-x@19.9/js/search.js"></script>
+
+  
+<script src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-material-x@19.9/js/search.js"></script>
+
 
 
 
