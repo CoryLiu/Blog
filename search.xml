@@ -558,6 +558,33 @@
     </entry>
     
     
+    
+    <entry>
+      <title>关于Vue中computed和watch使用场景的思考</title>
+      <link href="/Blog/2019/10/16/%E5%85%B3%E4%BA%8EVue%E4%B8%ADcomputed%E5%92%8Cwatch%E4%BD%BF%E7%94%A8%E5%9C%BA%E6%99%AF%E7%9A%84%E6%80%9D%E8%80%83/"/>
+      <url>/Blog/2019/10/16/%E5%85%B3%E4%BA%8EVue%E4%B8%ADcomputed%E5%92%8Cwatch%E4%BD%BF%E7%94%A8%E5%9C%BA%E6%99%AF%E7%9A%84%E6%80%9D%E8%80%83/</url>
+      
+        <content type="html"><![CDATA[<h1 id="为何需要计算属性（computed）"><a href="#为何需要计算属性（computed）" class="headerlink" title="为何需要计算属性（computed）"></a>为何需要计算属性（computed）</h1><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"example"</span>&gt;</span></span><br><span class="line">  &#123;&#123; message.split('').reverse().join('') &#125;&#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure><p>需要对data进行一些简单的计算与操作的时候，如上代码，直接在模板中放入逻辑。假如这个操作比较复杂，则对于页面后续的维护不易。假如页面中多个地方都需要进行相同的计算，那岂不是都需要复制一遍，当计算规则改变时，岂不是每个地方都需要进行修改。那么这种方式明显是不合适的。<br>所以vue提供了<code>计算属性</code>这一特性：</p><h2 id="基础例子"><a href="#基础例子" class="headerlink" title="基础例子"></a>基础例子</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"example"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">p</span>&gt;</span>Original message: "&#123;&#123; message &#125;&#125;"<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">p</span>&gt;</span>Computed reversed message: "&#123;&#123; reversedMessage &#125;&#125;"<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> vm = <span class="keyword">new</span> Vue(&#123;</span><br><span class="line">  el: <span class="string">'#example'</span>,</span><br><span class="line">  data: &#123;</span><br><span class="line">    message: <span class="string">'Hello'</span></span><br><span class="line">  &#125;,</span><br><span class="line">  computed: &#123;</span><br><span class="line">    <span class="comment">// 计算属性的 getter</span></span><br><span class="line">    reversedMessage: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">      <span class="comment">// `this` 指向 vm 实例</span></span><br><span class="line">      <span class="keyword">return</span> <span class="keyword">this</span>.message.split(<span class="string">''</span>).reverse().join(<span class="string">''</span>)</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure><p>vm.reversedMessage依赖于vm.message，所以当vm.message发生改变的时候，所有依赖vm.reverseMessage的绑定也会更新。</p><h2 id="注意："><a href="#注意：" class="headerlink" title="注意："></a>注意：</h2><p>与直接在模板中使用method的方式比较，使用computed只有在依赖的数据发生改变时才会进行计算，也就是它是有缓存的，使用method，则每次访问reverseMessage都将进行一次新的计算。这无疑对性能是不好的。</p><h1 id="侦听属性（watch）"><a href="#侦听属性（watch）" class="headerlink" title="侦听属性（watch）"></a>侦听属性（watch）</h1><p>vue官方的说法是，在需要数据变化的时候执行异步或开销较大的操作时(在computed中无法做到异步操作，异步函数执行之后，回调函数中返回值并不会触发dom的重新渲染)，使用watch</p><p>异步ajax请求的发起，可以使用 <a href="https://lodash.com/" target="_blank" rel="noopener">Lodash</a> 模块的 <a href="https://lodash.com/docs#debounce" target="_blank" rel="noopener">_.debounce</a> 进行请求发起的间隔，防止修改数据过于频繁，导致ajax请求无限发送，影响性能。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Coding </category>
+          
+          <category> Vue.js </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Vue.js </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
   
   
 </search>
