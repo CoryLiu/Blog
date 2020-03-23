@@ -4,6 +4,35 @@
   
     
     <entry>
+      <title>持续集成服务Travis CI</title>
+      <link href="/Blog/2020/03/23/%E6%8C%81%E7%BB%AD%E9%9B%86%E6%88%90%E6%9C%8D%E5%8A%A1Travis-CI/"/>
+      <url>/Blog/2020/03/23/%E6%8C%81%E7%BB%AD%E9%9B%86%E6%88%90%E6%9C%8D%E5%8A%A1Travis-CI/</url>
+      
+        <content type="html"><![CDATA[<h1 id="什么是Travis"><a href="#什么是Travis" class="headerlink" title="什么是Travis"></a>什么是Travis</h1><p>为了提高软件开发效率而诞生的，构建和测试的自动化工具。</p><p><img src="https://raw.githubusercontent.com/CoryLiu/Img-repo/master/img/20200323205340.png" alt=""></p><blockquote><p><a href="http://www.ruanyifeng.com/blog/2017/12/travis_ci_tutorial.html" target="_blank" rel="noopener">引用</a></p></blockquote>]]></content>
+      
+      
+      <categories>
+          
+          <category> Coding </category>
+          
+          <category> Travis </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Github </tag>
+            
+            <tag> Travis </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>js基础知识回忆与巩固</title>
       <link href="/Blog/2020/03/12/js%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E5%9B%9E%E5%BF%86%E4%B8%8E%E5%B7%A9%E5%9B%BA/"/>
       <url>/Blog/2020/03/12/js%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E5%9B%9E%E5%BF%86%E4%B8%8E%E5%B7%A9%E5%9B%BA/</url>
