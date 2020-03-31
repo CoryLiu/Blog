@@ -297,9 +297,113 @@
         
           
         
+          
+        
       
     
     
+      
+        
+          <div class='post-wrapper'>
+            <article class="post reveal ">
+  
+
+
+  <section class='meta'>
+    
+    
+    <div class="meta" id="header-meta">
+      
+        
+  <h2 class="title">
+    <a href="/Blog/2020/03/31/Vue%E5%8A%A8%E6%80%81%E5%8A%A0%E8%BD%BD%E7%9A%84%E4%BE%A7%E8%BE%B9%E6%A0%8F%EF%BC%8C%E5%88%B7%E6%96%B0%E9%A1%B5%E9%9D%A2%E5%87%BA%E7%8E%B0%E9%94%99%E8%AF%AF%E8%A7%A3%E5%86%B3%E6%96%B9%E5%BC%8F/">
+      Vue动态加载的侧边栏，刷新页面出现错误解决方式
+    </a>
+  </h2>
+
+
+      
+      <div class='new-meta-box'>
+        
+          
+        
+          
+            
+  <div class='new-meta-item author'>
+    
+      <a href="https://coryliu.github.io/Blog" rel="nofollow">
+        
+          <img src="https://cdn.jsdelivr.net/gh/CoryLiu/Img-repo@master/static_files/lyb/img/avatar微信图片_20191024112842.png">
+        
+        <p>Liu</p>
+      </a>
+    
+  </div>
+
+
+          
+        
+          
+            <div class="new-meta-item date">
+  <a class='notlink'>
+    <i class="fas fa-calendar-alt" aria-hidden="true"></i>
+    <p>2020-03-31</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+  
+  <div class='new-meta-item category'>
+    <a href='/Blog/blog/categories/Coding/Vue-js/' rel="nofollow">
+      <i class="fas fa-folder-open" aria-hidden="true"></i>
+      <p>Coding&nbsp;/&nbsp;Vue.js</p>
+    </a>
+  </div>
+
+
+          
+        
+          
+            
+
+          
+        
+      </div>
+      
+        <hr>
+      
+    </div>
+  </section>
+
+
+  <section class="article typo">
+    <div class="article-entry" itemprop="articleBody">
+      <h1 id="问题描述："><a href="#问题描述：" class="headerlink" title="问题描述："></a>问题描述：</h1><p>开发使用 <a href="https://github.com/PanJiaChen/vue-admin-template" target="_blank" rel="noopener">vue-admin-template</a>二次开发。<br>使用从后端获取路由数据，然后前端渲染的动态加载方式。<br>刷新动态加载进来的路由页面，会直接跳转到404页面（前提：路由里有配置404页面，否则是一片空白）</p>
+<p>解决方式：在vue-router的<code>全局前置守卫</code>router.beforeEach里<code>next()</code>改为<code>next({...to,replace:true})</code></p>
+      
+        <div class="readmore">
+          <a href="/Blog/2020/03/31/Vue%E5%8A%A8%E6%80%81%E5%8A%A0%E8%BD%BD%E7%9A%84%E4%BE%A7%E8%BE%B9%E6%A0%8F%EF%BC%8C%E5%88%B7%E6%96%B0%E9%A1%B5%E9%9D%A2%E5%87%BA%E7%8E%B0%E9%94%99%E8%AF%AF%E8%A7%A3%E5%86%B3%E6%96%B9%E5%BC%8F/" class="flat-box">
+            <i class="fas fa-book-open fa-fw" aria-hidden="true"></i>
+            阅读全文
+          </a>
+        </div>
+      
+    </div>
+    
+      <div class="full-width auto-padding tags">
+        
+          <a href="/Blog/blog/tags/Vue/" rel="nofollow"><i class="fas fa-tag fa-fw"></i> Vue</a>
+        
+      </div>
+    
+  </section>
+</article>
+
+          </div>
+        
       
         
           <div class='post-wrapper'>
@@ -879,7 +983,7 @@
     <div class='content pure'>
       <ul class="entry">
         
-          <li><a class="flat-box" title="/Blog/blog/categories/Coding/" href="/Blog/blog/categories/Coding/"><div class='name'>Coding</div><div class='badge'>(19)</div></a></li>
+          <li><a class="flat-box" title="/Blog/blog/categories/Coding/" href="/Blog/blog/categories/Coding/"><div class='name'>Coding</div><div class='badge'>(20)</div></a></li>
         
           <li><a class="flat-box child" title="/Blog/blog/categories/Coding/Django/" href="/Blog/blog/categories/Coding/Django/"><div class='name'>Django</div><div class='badge'>(1)</div></a></li>
         
@@ -891,7 +995,7 @@
         
           <li><a class="flat-box child" title="/Blog/blog/categories/Coding/Travis/" href="/Blog/blog/categories/Coding/Travis/"><div class='name'>Travis</div><div class='badge'>(1)</div></a></li>
         
-          <li><a class="flat-box child" title="/Blog/blog/categories/Coding/Vue-js/" href="/Blog/blog/categories/Coding/Vue-js/"><div class='name'>Vue.js</div><div class='badge'>(7)</div></a></li>
+          <li><a class="flat-box child" title="/Blog/blog/categories/Coding/Vue-js/" href="/Blog/blog/categories/Coding/Vue-js/"><div class='name'>Vue.js</div><div class='badge'>(8)</div></a></li>
         
           <li><a class="flat-box child" title="/Blog/blog/categories/Coding/uni-app/" href="/Blog/blog/categories/Coding/uni-app/"><div class='name'>uni-app</div><div class='badge'>(1)</div></a></li>
         
@@ -959,7 +1063,7 @@
 </header>
 
     <div class='content pure'>
-      <a href="/Blog/blog/tags/Array/" style="font-size: 14px; color: #999">Array</a> <a href="/Blog/blog/tags/Coding/" style="font-size: 17.33px; color: #828282">Coding</a> <a href="/Blog/blog/tags/Django/" style="font-size: 14px; color: #999">Django</a> <a href="/Blog/blog/tags/Docker/" style="font-size: 14px; color: #999">Docker</a> <a href="/Blog/blog/tags/ES6/" style="font-size: 17.33px; color: #828282">ES6</a> <a href="/Blog/blog/tags/Express/" style="font-size: 14px; color: #999">Express</a> <a href="/Blog/blog/tags/Github/" style="font-size: 14px; color: #999">Github</a> <a href="/Blog/blog/tags/Hexo/" style="font-size: 14px; color: #999">Hexo</a> <a href="/Blog/blog/tags/JavaScript/" style="font-size: 24px; color: #555">JavaScript</a> <a href="/Blog/blog/tags/Node-js/" style="font-size: 17.33px; color: #828282">Node.js</a> <a href="/Blog/blog/tags/Promise/" style="font-size: 14px; color: #999">Promise</a> <a href="/Blog/blog/tags/Travis/" style="font-size: 14px; color: #999">Travis</a> <a href="/Blog/blog/tags/Vue/" style="font-size: 20.67px; color: #6c6c6c">Vue</a> <a href="/Blog/blog/tags/Vue-js/" style="font-size: 17.33px; color: #828282">Vue.js</a> <a href="/Blog/blog/tags/axios/" style="font-size: 14px; color: #999">axios</a> <a href="/Blog/blog/tags/call/" style="font-size: 14px; color: #999">call</a> <a href="/Blog/blog/tags/css/" style="font-size: 14px; color: #999">css</a> <a href="/Blog/blog/tags/hexo/" style="font-size: 14px; color: #999">hexo</a> <a href="/Blog/blog/tags/uni-app/" style="font-size: 14px; color: #999">uni-app</a> <a href="/Blog/blog/tags/yarn/" style="font-size: 14px; color: #999">yarn</a> <a href="/Blog/blog/tags/%E4%B9%90%E7%90%86/" style="font-size: 17.33px; color: #828282">乐理</a> <a href="/Blog/blog/tags/%E5%89%8D%E7%AB%AF/" style="font-size: 14px; color: #999">前端</a> <a href="/Blog/blog/tags/%E7%AE%AD%E5%A4%B4%E5%87%BD%E6%95%B0/" style="font-size: 14px; color: #999">箭头函数</a>
+      <a href="/Blog/blog/tags/Array/" style="font-size: 14px; color: #999">Array</a> <a href="/Blog/blog/tags/Coding/" style="font-size: 19px; color: #777">Coding</a> <a href="/Blog/blog/tags/Django/" style="font-size: 14px; color: #999">Django</a> <a href="/Blog/blog/tags/Docker/" style="font-size: 14px; color: #999">Docker</a> <a href="/Blog/blog/tags/ES6/" style="font-size: 19px; color: #777">ES6</a> <a href="/Blog/blog/tags/Express/" style="font-size: 14px; color: #999">Express</a> <a href="/Blog/blog/tags/Github/" style="font-size: 14px; color: #999">Github</a> <a href="/Blog/blog/tags/Hexo/" style="font-size: 14px; color: #999">Hexo</a> <a href="/Blog/blog/tags/JavaScript/" style="font-size: 24px; color: #555">JavaScript</a> <a href="/Blog/blog/tags/Node-js/" style="font-size: 19px; color: #777">Node.js</a> <a href="/Blog/blog/tags/Promise/" style="font-size: 14px; color: #999">Promise</a> <a href="/Blog/blog/tags/Travis/" style="font-size: 14px; color: #999">Travis</a> <a href="/Blog/blog/tags/Vue/" style="font-size: 24px; color: #555">Vue</a> <a href="/Blog/blog/tags/Vue-js/" style="font-size: 19px; color: #777">Vue.js</a> <a href="/Blog/blog/tags/axios/" style="font-size: 14px; color: #999">axios</a> <a href="/Blog/blog/tags/call/" style="font-size: 14px; color: #999">call</a> <a href="/Blog/blog/tags/css/" style="font-size: 14px; color: #999">css</a> <a href="/Blog/blog/tags/hexo/" style="font-size: 14px; color: #999">hexo</a> <a href="/Blog/blog/tags/uni-app/" style="font-size: 14px; color: #999">uni-app</a> <a href="/Blog/blog/tags/yarn/" style="font-size: 14px; color: #999">yarn</a> <a href="/Blog/blog/tags/%E4%B9%90%E7%90%86/" style="font-size: 19px; color: #777">乐理</a> <a href="/Blog/blog/tags/%E5%89%8D%E7%AB%AF/" style="font-size: 14px; color: #999">前端</a> <a href="/Blog/blog/tags/%E7%AE%AD%E5%A4%B4%E5%87%BD%E6%95%B0/" style="font-size: 14px; color: #999">箭头函数</a>
     </div>
   </section>
 
