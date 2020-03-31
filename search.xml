@@ -4,6 +4,37 @@
   
     
     <entry>
+      <title>express笔记</title>
+      <link href="/Blog/2020/03/31/express%E7%AC%94%E8%AE%B0/"/>
+      <url>/Blog/2020/03/31/express%E7%AC%94%E8%AE%B0/</url>
+      
+        <content type="html"><![CDATA[<h1 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install express --save</span><br></pre></td></tr></table></figure><h1 id="Express应用程序生成器"><a href="#Express应用程序生成器" class="headerlink" title="Express应用程序生成器"></a>Express应用程序生成器</h1><p>express-generator 快速创建一个应用的骨架   </p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g express-generator</span><br></pre></td></tr></table></figure><h2 id="express命令行参数"><a href="#express命令行参数" class="headerlink" title="express命令行参数"></a>express命令行参数</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">express -h</span><br><span class="line"></span><br><span class="line">  Usage: express [options] [dir]</span><br><span class="line"></span><br><span class="line">  Options:</span><br><span class="line"></span><br><span class="line">    -h, --<span class="built_in">help</span>          输出使用方法</span><br><span class="line">        --version       输出版本号</span><br><span class="line">    -e, --ejs           添加对 ejs 模板引擎的支持</span><br><span class="line">        --hbs           添加对 handlebars 模板引擎的支持</span><br><span class="line">        --pug           添加对 pug 模板引擎的支持</span><br><span class="line">    -H, --hogan         添加对 hogan.js 模板引擎的支持</span><br><span class="line">        --no-view       创建不带视图引擎的项目</span><br><span class="line">    -v, --view &lt;engine&gt; 添加对视图引擎（view） &lt;engine&gt; 的支持 (ejs|hbs|hjs|jade|pug|twig|vash) （默认是 jade 模板引擎）</span><br><span class="line">    -c, --css &lt;engine&gt;  添加样式表引擎 &lt;engine&gt; 的支持 (less|stylus|compass|sass) （默认是普通的 css 文件）</span><br><span class="line">        --git           添加 .gitignore</span><br><span class="line">    -f, --force         强制在非空目录下创建</span><br></pre></td></tr></table></figure><p>例：创建了一个名称为 myapp 的 Express 应用</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">express --view=pug myapp</span><br></pre></td></tr></table></figure><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> myapp</span><br></pre></td></tr></table></figure><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install</span><br></pre></td></tr></table></figure><h2 id="启动app"><a href="#启动app" class="headerlink" title="启动app"></a>启动app</h2><p>MacOS or Linux：   </p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">DEBUG=myapp:* npm start</span><br></pre></td></tr></table></figure><p>Windows</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">set</span> DEBUG=myapp:*</span><br><span class="line">npm start</span><br></pre></td></tr></table></figure><h1 id="生成示例的文件结构"><a href="#生成示例的文件结构" class="headerlink" title="生成示例的文件结构"></a>生成示例的文件结构</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">.</span><br><span class="line">├── app.js</span><br><span class="line">├── bin</span><br><span class="line">│   └── www</span><br><span class="line">├── package.json</span><br><span class="line">├── public</span><br><span class="line">│   ├── images</span><br><span class="line">│   ├── javascripts</span><br><span class="line">│   └── stylesheets</span><br><span class="line">│       └── style.css</span><br><span class="line">├── routes</span><br><span class="line">│   ├── index.js</span><br><span class="line">│   └── users.js</span><br><span class="line">└── views</span><br><span class="line">    ├── error.pug</span><br><span class="line">    ├── index.pug</span><br><span class="line">    └── layout.pug</span><br><span class="line"></span><br><span class="line">7 directories, 9 files</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> Coding </category>
+          
+          <category> Express </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> JavaScript </tag>
+            
+            <tag> Node.js </tag>
+            
+            <tag> Express </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>持续集成服务Travis CI</title>
       <link href="/Blog/2020/03/23/%E6%8C%81%E7%BB%AD%E9%9B%86%E6%88%90%E6%9C%8D%E5%8A%A1Travis-CI/"/>
       <url>/Blog/2020/03/23/%E6%8C%81%E7%BB%AD%E9%9B%86%E6%88%90%E6%9C%8D%E5%8A%A1Travis-CI/</url>
@@ -273,9 +304,9 @@
             
             <tag> Coding </tag>
             
-            <tag> Vue.js </tag>
-            
             <tag> Node.js </tag>
+            
+            <tag> Vue.js </tag>
             
         </tags>
       

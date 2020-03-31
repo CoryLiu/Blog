@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   
-  <title>笔记-JavaScript判断数据类型的方法总结 | 阿b的Blog</title>
+  <title>express笔记 | 阿b的Blog</title>
   
   
 
@@ -295,8 +295,8 @@
         
   
     <h1 class="title">
-      <a href="/Blog/2020/03/11/%E7%AC%94%E8%AE%B0-JavaScript%E5%88%A4%E6%96%AD%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E7%9A%84%E6%96%B9%E6%B3%95%E6%80%BB%E7%BB%93/">
-        笔记-JavaScript判断数据类型的方法总结
+      <a href="/Blog/2020/03/31/express%E7%AC%94%E8%AE%B0/">
+        express笔记
       </a>
     </h1>
   
@@ -327,7 +327,7 @@
             <div class="new-meta-item date">
   <a class='notlink'>
     <i class="fas fa-calendar-alt" aria-hidden="true"></i>
-    <p>2020-03-11</p>
+    <p>2020-03-31</p>
   </a>
 </div>
 
@@ -337,9 +337,9 @@
             
   
   <div class='new-meta-item category'>
-    <a href='/Blog/blog/categories/Coding/JavaScript/' rel="nofollow">
+    <a href='/Blog/blog/categories/Coding/Express/' rel="nofollow">
       <i class="fas fa-folder-open" aria-hidden="true"></i>
-      <p>Coding&nbsp;/&nbsp;JavaScript</p>
+      <p>Coding&nbsp;/&nbsp;Express</p>
     </a>
   </div>
 
@@ -379,83 +379,20 @@
 
     <section class="article typo">
       <div class="article-entry" itemprop="articleBody">
-        <h1 id="1-typeof"><a href="#1-typeof" class="headerlink" title="1: typeof"></a>1: typeof</h1><p><code>typeof</code> 操作符返回一个<code>字符串</code>，表示未经计算的操作数的类型。</p>
-<h2 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h2><blockquote>
-<p>typeof operand<br>typeof(operand)</p>
-</blockquote>
-<p> <em>注: operand [ˈɑːpərænd] n. [计] 操作数</em></p>
- <a id="more"></a>
+        <h1 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install express --save</span><br></pre></td></tr></table></figure>
+<h1 id="Express应用程序生成器"><a href="#Express应用程序生成器" class="headerlink" title="Express应用程序生成器"></a>Express应用程序生成器</h1><p>express-generator 快速创建一个应用的骨架   </p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g express-generator</span><br></pre></td></tr></table></figure>
+<h2 id="express命令行参数"><a href="#express命令行参数" class="headerlink" title="express命令行参数"></a>express命令行参数</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">express -h</span><br><span class="line"></span><br><span class="line">  Usage: express [options] [dir]</span><br><span class="line"></span><br><span class="line">  Options:</span><br><span class="line"></span><br><span class="line">    -h, --<span class="built_in">help</span>          输出使用方法</span><br><span class="line">        --version       输出版本号</span><br><span class="line">    -e, --ejs           添加对 ejs 模板引擎的支持</span><br><span class="line">        --hbs           添加对 handlebars 模板引擎的支持</span><br><span class="line">        --pug           添加对 pug 模板引擎的支持</span><br><span class="line">    -H, --hogan         添加对 hogan.js 模板引擎的支持</span><br><span class="line">        --no-view       创建不带视图引擎的项目</span><br><span class="line">    -v, --view &lt;engine&gt; 添加对视图引擎（view） &lt;engine&gt; 的支持 (ejs|hbs|hjs|jade|pug|twig|vash) （默认是 jade 模板引擎）</span><br><span class="line">    -c, --css &lt;engine&gt;  添加样式表引擎 &lt;engine&gt; 的支持 (less|stylus|compass|sass) （默认是普通的 css 文件）</span><br><span class="line">        --git           添加 .gitignore</span><br><span class="line">    -f, --force         强制在非空目录下创建</span><br></pre></td></tr></table></figure>
 
-<h3 id="参数"><a href="#参数" class="headerlink" title="参数"></a>参数</h3><p><strong>operand</strong></p>
-<p>一个表示对象或原始值的表达式，其类型将被返回</p>
-<h2 id="描述"><a href="#描述" class="headerlink" title="描述"></a>描述</h2><table>
-<thead>
-<tr>
-<th>类型</th>
-<th>结果</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>Undefined</td>
-<td>“undefined”</td>
-</tr>
-<tr>
-<td>Null</td>
-<td>“object”</td>
-</tr>
-<tr>
-<td>Boolean</td>
-<td>“boolean”</td>
-</tr>
-<tr>
-<td>Number</td>
-<td>“number”</td>
-</tr>
-<tr>
-<td>BigInt <a href="https://zhuanlan.zhihu.com/p/36330307" target="_blank" rel="noopener">详细</a></td>
-<td>“bigint”</td>
-</tr>
-<tr>
-<td>String</td>
-<td>“string”</td>
-</tr>
-<tr>
-<td>Symbol(ES2015新增的数据类型)</td>
-<td>“symbol”</td>
-</tr>
-<tr>
-<td>Function对象</td>
-<td>“function”</td>
-</tr>
-<tr>
-<td>其他任何对象</td>
-<td>“object”</td>
-</tr>
-</tbody></table>
-<h2 id="注意！！！-null"><a href="#注意！！！-null" class="headerlink" title="注意！！！ null"></a>注意！！！ null</h2><blockquote>
-<p>typeof null === ‘object’;</p>
-</blockquote>
-<p>在 JavaScript 最初的实现中，JavaScript 中的值是由一个表示类型的标签和实际数据值表示的。对象的类型标签是 0。由于 null 代表的是空指针（大多数平台下值为 0x00），因此，null 的类型标签是 0，typeof null 也因此返回 “object”。</p>
-<p>曾有一个 ECMAScript 的修复提案（通过选择性加入的方式），但被拒绝了。该提案会导致 typeof null === ‘null’。</p>
-<h2 id="new"><a href="#new" class="headerlink" title="new"></a>new</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 除 Function 外的所有构造函数的类型都是 'object'</span></span><br><span class="line"><span class="keyword">var</span> str = <span class="keyword">new</span> <span class="built_in">String</span>(<span class="string">'String'</span>);</span><br><span class="line"><span class="keyword">var</span> num = <span class="keyword">new</span> <span class="built_in">Number</span>(<span class="number">100</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">typeof</span> str; <span class="comment">// 返回 'object'</span></span><br><span class="line"><span class="keyword">typeof</span> num; <span class="comment">// 返回 'object'</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> func = <span class="keyword">new</span> <span class="built_in">Function</span>();</span><br><span class="line"></span><br><span class="line"><span class="keyword">typeof</span> func; <span class="comment">// 返回 'function'</span></span><br></pre></td></tr></table></figure>
-
-<h1 id="2-toString"><a href="#2-toString" class="headerlink" title="2: toString"></a>2: toString</h1><p>toString 是 object 的原型方法，调用该方法，默认返回当前对象的 Class 。<br>对于 Object 对象，直接调用 toString()  就能返回 [object Object] 。而对于其他对象，则需要通过 call / apply 来调用才能返回正确的类型信息。</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Object</span>.prototype.toString.call(<span class="string">''</span>) ;   <span class="comment">// [object String]</span></span><br><span class="line"><span class="built_in">Object</span>.prototype.toString.call(<span class="number">1</span>) ;    <span class="comment">// [object Number]</span></span><br><span class="line"><span class="built_in">Object</span>.prototype.toString.call(<span class="literal">true</span>) ; <span class="comment">// [object Boolean]</span></span><br><span class="line"><span class="built_in">Object</span>.prototype.toString.call(<span class="built_in">Symbol</span>()); <span class="comment">//[object Symbol]</span></span><br><span class="line"><span class="built_in">Object</span>.prototype.toString.call(<span class="literal">undefined</span>) ; <span class="comment">// [object Undefined]</span></span><br><span class="line"><span class="built_in">Object</span>.prototype.toString.call(<span class="literal">null</span>) ; <span class="comment">// [object Null]</span></span><br><span class="line"><span class="built_in">Object</span>.prototype.toString.call(<span class="keyword">new</span> <span class="built_in">Function</span>()) ; <span class="comment">// [object Function]</span></span><br><span class="line"><span class="built_in">Object</span>.prototype.toString.call(<span class="keyword">new</span> <span class="built_in">Date</span>()) ; <span class="comment">// [object Date]</span></span><br><span class="line"><span class="built_in">Object</span>.prototype.toString.call([]) ; <span class="comment">// [object Array]</span></span><br><span class="line"><span class="built_in">Object</span>.prototype.toString.call(<span class="keyword">new</span> <span class="built_in">RegExp</span>()) ; <span class="comment">// [object RegExp]</span></span><br><span class="line"><span class="built_in">Object</span>.prototype.toString.call(<span class="keyword">new</span> <span class="built_in">Error</span>()) ; <span class="comment">// [object Error]</span></span><br><span class="line"><span class="built_in">Object</span>.prototype.toString.call(<span class="built_in">document</span>) ; <span class="comment">// [object HTMLDocument]</span></span><br><span class="line"><span class="built_in">Object</span>.prototype.toString.call(<span class="built_in">window</span>) ; <span class="comment">//[object global] window 是全局对象 global 的引用</span></span><br></pre></td></tr></table></figure>
-
-<h1 id="3-constructor"><a href="#3-constructor" class="headerlink" title="3: constructor"></a>3: constructor</h1><p>constructor 是原型 prototype 的一个属性，当函数被定义时候，js 引擎会为函数添加原型prototype，并且这个 prototype 中 constructor 属性指向函数引用， 因此重写 prototype 会丢失原来的constructor。</p>
-<p><font color=red><strong>不过这种方法有问题：</strong></font></p>
-<ol>
-<li>null 和 undefined 无constructor，这种方法判断不了。</li>
-<li>如果自定义对象，开发者重写prototype之后，原有的constructor会丢失，因此，为了规范开发，在重写对象原型时一般都需要重新给 constructor 赋值，以保证对象实例的类型不被篡改。</li>
-</ol>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">''</span>.constructor === <span class="built_in">String</span> <span class="comment">//true</span></span><br><span class="line"><span class="keyword">new</span> <span class="built_in">Number</span>(<span class="number">1</span>).constructor === <span class="built_in">Number</span> <span class="comment">//true</span></span><br><span class="line"><span class="literal">true</span>.constructor === <span class="built_in">Boolean</span> <span class="comment">//true</span></span><br><span class="line"><span class="keyword">new</span> <span class="built_in">Function</span>().constructor === <span class="built_in">Function</span> <span class="comment">//true</span></span><br><span class="line"><span class="keyword">new</span> <span class="built_in">Date</span>().constructor === <span class="built_in">Date</span> <span class="comment">//true</span></span><br><span class="line"><span class="keyword">new</span> <span class="built_in">Error</span>().constructor === <span class="built_in">Error</span> <span class="comment">//true</span></span><br><span class="line">[].constructor === <span class="built_in">Array</span> <span class="comment">//true</span></span><br><span class="line"><span class="built_in">document</span>.constructor === HTMLDocument <span class="comment">//true</span></span><br><span class="line"><span class="built_in">window</span>.constructor === Window <span class="comment">//true</span></span><br></pre></td></tr></table></figure>
-
-<h1 id="4-instanceof"><a href="#4-instanceof" class="headerlink" title="4:instanceof"></a>4:instanceof</h1><p>字面翻译理解，<code>instance</code> 实例，即<br>instanceof 是用来判断 A 是否为 B 的实例，表达式为：A instanceof B，如果 A 是 B 的实例，则返回 true,否则返回 false。 在这里需要特别注意的是：instanceof 检测的是原型</p>
-<p><img src="https://raw.githubusercontent.com/CoryLiu/Img-repo/master/img/%E6%8D%95%E8%8E%B7.JPG" alt=""></p>
-<p>[]的原型指向 Array.prototype, 间接指向 Object.prototype</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[] <span class="keyword">instanceof</span> <span class="built_in">Array</span> === <span class="literal">true</span> <span class="comment">//true</span></span><br><span class="line">[] <span class="keyword">instanceof</span> <span class="built_in">Object</span> === <span class="literal">true</span> <span class="comment">//也是true</span></span><br></pre></td></tr></table></figure>
-<p>所以 instanceof 只能用来判断两个对象是否属于实例关系， 而不能判断一个对象实例具体属于哪种类型。（JavaScript特殊的原型链机制）</p>
-
+<p>例：创建了一个名称为 myapp 的 Express 应用</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">express --view=pug myapp</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> myapp</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install</span><br></pre></td></tr></table></figure>
+<h2 id="启动app"><a href="#启动app" class="headerlink" title="启动app"></a>启动app</h2><p>MacOS or Linux：   </p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">DEBUG=myapp:* npm start</span><br></pre></td></tr></table></figure>
+<p>Windows</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">set</span> DEBUG=myapp:*</span><br><span class="line">npm start</span><br></pre></td></tr></table></figure>
+<h1 id="生成示例的文件结构"><a href="#生成示例的文件结构" class="headerlink" title="生成示例的文件结构"></a>生成示例的文件结构</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">.</span><br><span class="line">├── app.js</span><br><span class="line">├── bin</span><br><span class="line">│   └── www</span><br><span class="line">├── package.json</span><br><span class="line">├── public</span><br><span class="line">│   ├── images</span><br><span class="line">│   ├── javascripts</span><br><span class="line">│   └── stylesheets</span><br><span class="line">│       └── style.css</span><br><span class="line">├── routes</span><br><span class="line">│   ├── index.js</span><br><span class="line">│   └── users.js</span><br><span class="line">└── views</span><br><span class="line">    ├── error.pug</span><br><span class="line">    ├── index.pug</span><br><span class="line">    └── layout.pug</span><br><span class="line"></span><br><span class="line">7 directories, 9 files</span><br></pre></td></tr></table></figure>
       </div>
       
         <br>
@@ -478,7 +415,7 @@
         
           
   
-  <div class="new-meta-item meta-tags"><a class="tag" href="/Blog/blog/tags/JavaScript/" rel="nofollow"><i class="fas fa-tag" aria-hidden="true"></i><p>JavaScript</p></a></div>
+  <div class="new-meta-item meta-tags"><a class="tag" href="/Blog/blog/tags/JavaScript/" rel="nofollow"><i class="fas fa-tag" aria-hidden="true"></i><p>JavaScript</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/Blog/blog/tags/Node-js/" rel="nofollow"><i class="fas fa-tag" aria-hidden="true"></i><p>Node.js</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/Blog/blog/tags/Express/" rel="nofollow"><i class="fas fa-tag" aria-hidden="true"></i><p>Express</p></a></div>
 
 
         
@@ -491,11 +428,7 @@
       
         <a class="-mob-share-qq" title="QQ好友" rel="external nofollow noopener noreferrer"
           
-          href="http://connect.qq.com/widget/shareqq/index.html?url=https://coryliu.github.io/Blog/2020/03/11/%E7%AC%94%E8%AE%B0-JavaScript%E5%88%A4%E6%96%AD%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E7%9A%84%E6%96%B9%E6%B3%95%E6%80%BB%E7%BB%93/&title=笔记-JavaScript判断数据类型的方法总结 | 阿b的Blog&pics=https://cdn.jsdelivr.net/gh/CoryLiu/Img-repo@master/static_files/lyb/img/avatar微信图片_20191024112842.png&summary=1: typeoftypeof 操作符返回一个字符串，表示未经计算的操作数的类型。
-语法
-typeof operandtypeof(operand)
-
- 注: operand [ˈɑːpərænd] n. [计] 操作数"
+          href="http://connect.qq.com/widget/shareqq/index.html?url=https://coryliu.github.io/Blog/2020/03/31/express%E7%AC%94%E8%AE%B0/&title=express笔记 | 阿b的Blog&pics=https://cdn.jsdelivr.net/gh/CoryLiu/Img-repo@master/static_files/lyb/img/avatar微信图片_20191024112842.png&summary="
           
           >
           
@@ -507,11 +440,7 @@ typeof operandtypeof(operand)
       
         <a class="-mob-share-qzone" title="QQ空间" rel="external nofollow noopener noreferrer"
           
-          href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://coryliu.github.io/Blog/2020/03/11/%E7%AC%94%E8%AE%B0-JavaScript%E5%88%A4%E6%96%AD%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E7%9A%84%E6%96%B9%E6%B3%95%E6%80%BB%E7%BB%93/&title=笔记-JavaScript判断数据类型的方法总结 | 阿b的Blog&pics=https://cdn.jsdelivr.net/gh/CoryLiu/Img-repo@master/static_files/lyb/img/avatar微信图片_20191024112842.png&summary=1: typeoftypeof 操作符返回一个字符串，表示未经计算的操作数的类型。
-语法
-typeof operandtypeof(operand)
-
- 注: operand [ˈɑːpərænd] n. [计] 操作数"
+          href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://coryliu.github.io/Blog/2020/03/31/express%E7%AC%94%E8%AE%B0/&title=express笔记 | 阿b的Blog&pics=https://cdn.jsdelivr.net/gh/CoryLiu/Img-repo@master/static_files/lyb/img/avatar微信图片_20191024112842.png&summary="
           
           >
           
@@ -521,7 +450,7 @@ typeof operandtypeof(operand)
       
     
       
-        <a class='qrcode' rel="external nofollow noopener noreferrer" href='data:image/png;base64,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'>
+        <a class='qrcode' rel="external nofollow noopener noreferrer" href='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADeCAAAAAB3DOFrAAACuElEQVR42u3b22ojMRAE0Pz/T2dhnxaWsau6pVzgzJNxYo2OAiO5uvPxEV+ff6+nd55eP43z75WP9nrk1YWHh4c3mvrT1d7y/8+2y5fP5/Xv4OHh4d3mJbd8AuRL8/q5nYDzOePh4eH9BN7rbeD1FHNMQsLDw8P7LbxZQJAvTbLl4OHh4f0cXn6bduptgJt/6nDWgoeHhxfzZjHr976+WN/Dw8PDW1TVk8fu/qdtGFHMEw8PD+8Cb1bsP1WymkUMbYENDw8P7wZvVvRqI4YkOJ61GhTj4+Hh4a15eWzaRq5tqNEio+0KDw8P7xqvLca3RaxZse3YdwU8PDy8o7zZQXa/GeQhRRsTR98V8PDw8Na82c3yLSR/Z7bEb8bBw8PDu8DLh2inmByaZ8HEqi0VDw8P7yhvE+bmmDxEnrVq4eHh4d3jJV/y9xvD7Dfz94vWATw8PLyjvLwE1T7WN+HFLBTGw8PDu8c7VQabFclyXlsMO9xAgIeHhxe0q+aF/DZ0aEfL/0p4eHh4X8Obhaezw+6mPLaqauHh4eEd5c2OsHncsCn2tyHIY4yLh4eHd5mXTDePIc7Gu/k2Uw+Eh4eH151yD/876L783y7Hm3vh4eHhXeAlR9W2WLUp87dziJYADw8P7wIvP6rOWq/aZZod9Ov+CDw8PLwFrx0i3yRmZbDNpnVghfDw8PCCbWDW9pR8Kn/dxiLRguLh4eFd5tXlpbh81TYT5K0GUZUPDw8P7xDvs7zamLUNONpmrzcLioeHh3eBl1/5cAm4PWTvj+N4eHh4Z3mztqq8bL/fftrQ5E3WgoeHh3eId+rx3W4Pq/0KDw8P75fw8hr97KHfkt7MEw8PD+9beW0kkUexCbKNlfHw8PBu8zatVPlBfNbUtWkswMPDw7vB2zQ2bY7jeQPBPkrGw8PDO8T7A0hiNcqx6QShAAAAAElFTkSuQmCC'>
         
           <img src="https://cdn.jsdelivr.net/gh/xaoxuu/assets@19.1.9/logo/128/wechat.png">
         
@@ -531,11 +460,7 @@ typeof operandtypeof(operand)
       
         <a class="-mob-share-weibo" title="微博" rel="external nofollow noopener noreferrer"
           
-          href="http://service.weibo.com/share/share.php?url=https://coryliu.github.io/Blog/2020/03/11/%E7%AC%94%E8%AE%B0-JavaScript%E5%88%A4%E6%96%AD%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E7%9A%84%E6%96%B9%E6%B3%95%E6%80%BB%E7%BB%93/&title=笔记-JavaScript判断数据类型的方法总结 | 阿b的Blog&pics=https://cdn.jsdelivr.net/gh/CoryLiu/Img-repo@master/static_files/lyb/img/avatar微信图片_20191024112842.png&summary=1: typeoftypeof 操作符返回一个字符串，表示未经计算的操作数的类型。
-语法
-typeof operandtypeof(operand)
-
- 注: operand [ˈɑːpərænd] n. [计] 操作数"
+          href="http://service.weibo.com/share/share.php?url=https://coryliu.github.io/Blog/2020/03/31/express%E7%AC%94%E8%AE%B0/&title=express笔记 | 阿b的Blog&pics=https://cdn.jsdelivr.net/gh/CoryLiu/Img-repo@master/static_files/lyb/img/avatar微信图片_20191024112842.png&summary="
           
           >
           
@@ -559,40 +484,21 @@ typeof operandtypeof(operand)
       
           <div class="prev-next">
               
-                  <section class="prev">
-                      <span class="art-item-left">
-                          <h6><i class="fas fa-chevron-left" aria-hidden="true"></i>&nbsp;上一页</h6>
-                          <h4>
-                              <a href="/Blog/2020/03/12/js%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E5%9B%9E%E5%BF%86%E4%B8%8E%E5%B7%A9%E5%9B%BA/" rel="prev" title="js基础知识回忆与巩固">
-                                
-                                    js基础知识回忆与巩固
-                                
-                              </a>
-                          </h4>
-                          
-                              
-                              <h6 class="tags">
-                                  <a class="tag" href="/Blog/blog/tags/Vue/"><i class="fas fa-tag fa-fw" aria-hidden="true"></i> Vue</a> <a class="tag" href="/Blog/blog/tags/JavaScript/"><i class="fas fa-tag fa-fw" aria-hidden="true"></i> JavaScript</a>
-                              </h6>
-                          
-                      </span>
-                  </section>
-              
               
                   <section class="next">
                       <span class="art-item-right" aria-hidden="true">
                           <h6>下一页&nbsp;<i class="fas fa-chevron-right" aria-hidden="true"></i></h6>
                           <h4>
-                              <a href="/Blog/2020/03/08/less-sass-scss%E7%AC%94%E8%AE%B0/" rel="prev" title="less,sass,scss笔记">
+                              <a href="/Blog/2020/03/23/%E6%8C%81%E7%BB%AD%E9%9B%86%E6%88%90%E6%9C%8D%E5%8A%A1Travis-CI/" rel="prev" title="持续集成服务Travis CI">
                                   
-                                      less,sass,scss笔记
+                                      持续集成服务Travis CI
                                   
                               </a>
                           </h4>
                           
                               
                               <h6 class="tags">
-                                  <a class="tag" href="/Blog/blog/tags/css/"><i class="fas fa-tag fa-fw" aria-hidden="true"></i> css</a>
+                                  <a class="tag" href="/Blog/blog/tags/Github/"><i class="fas fa-tag fa-fw" aria-hidden="true"></i> Github</a> <a class="tag" href="/Blog/blog/tags/Travis/"><i class="fas fa-tag fa-fw" aria-hidden="true"></i> Travis</a>
                               </h6>
                           
                       </span>
@@ -622,7 +528,7 @@ typeof operandtypeof(operand)
 
   <script>
     window.subData = {
-      title: '笔记-JavaScript判断数据类型的方法总结',
+      title: 'express笔记',
       tools: true
     }
   </script>
@@ -653,7 +559,7 @@ typeof operandtypeof(operand)
 </header>
 
     <div class='content pure'>
-      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#1-typeof"><span class="toc-text">1: typeof</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#语法"><span class="toc-text">语法</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#参数"><span class="toc-text">参数</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#描述"><span class="toc-text">描述</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#注意！！！-null"><span class="toc-text">注意！！！ null</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#new"><span class="toc-text">new</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2-toString"><span class="toc-text">2: toString</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#3-constructor"><span class="toc-text">3: constructor</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#4-instanceof"><span class="toc-text">4:instanceof</span></a></li></ol>
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#安装"><span class="toc-text">安装</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Express应用程序生成器"><span class="toc-text">Express应用程序生成器</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#express命令行参数"><span class="toc-text">express命令行参数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#启动app"><span class="toc-text">启动app</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#生成示例的文件结构"><span class="toc-text">生成示例的文件结构</span></a></li></ol>
     </div>
   </section>
 
