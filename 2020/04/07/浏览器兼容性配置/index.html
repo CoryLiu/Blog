@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   
-  <title>Category: 关于博客 | 阿b的Blog</title>
+  <title>浏览器兼容性配置 | 阿b的Blog</title>
   
   
 
@@ -48,7 +48,7 @@
   
   
   <div class="cover-wrapper">
-    <cover class='cover  half'>
+    <cover class='cover vuecli half'>
       
         
   <h1 class='title'>阿b的Blog</h1>
@@ -280,25 +280,11 @@
 
   <div class="l_body">
     <div class='body-wrapper'>
-      
-<div class='l_main'>
+      <div class='l_main'>
   
+
+  <article id="vuecli" class="post white-box article-type-vuecli" itemscope itemprop="blogPost">
     
-      
-  <section class="post-list">
-    
-      
-        
-          
-        
-      
-    
-    
-      
-        
-          <div class='post-wrapper'>
-            <article class="post reveal ">
-  
 
 
   <section class='meta'>
@@ -307,11 +293,13 @@
     <div class="meta" id="header-meta">
       
         
-  <h2 class="title">
-    <a href="/Blog/2019/11/20/hexo%E5%86%99%E4%BD%9C%E5%91%BD%E4%BB%A4/">
-      hexo写作命令
-    </a>
-  </h2>
+  
+    <h1 class="title">
+      <a href="/Blog/2020/04/07/%E6%B5%8F%E8%A7%88%E5%99%A8%E5%85%BC%E5%AE%B9%E6%80%A7%E9%85%8D%E7%BD%AE/">
+        浏览器兼容性配置
+      </a>
+    </h1>
+  
 
 
       
@@ -339,7 +327,7 @@
             <div class="new-meta-item date">
   <a class='notlink'>
     <i class="fas fa-calendar-alt" aria-hidden="true"></i>
-    <p>2019-11-20</p>
+    <p>2020-04-07</p>
   </a>
 </div>
 
@@ -349,11 +337,29 @@
             
   
   <div class='new-meta-item category'>
-    <a href='/Blog/blog/categories/%E5%85%B3%E4%BA%8E%E5%8D%9A%E5%AE%A2/hexo%E5%91%BD%E4%BB%A4/' rel="nofollow">
+    <a href='/Blog/blog/categories/Coding/Vue-js/' rel="nofollow">
       <i class="fas fa-folder-open" aria-hidden="true"></i>
-      <p>关于博客&nbsp;/&nbsp;hexo命令</p>
+      <p>Coding&nbsp;/&nbsp;Vue.js</p>
     </a>
   </div>
+
+
+          
+        
+          
+            
+  
+    <div class="new-meta-item browse busuanzi">
+      <a class='notlink'>
+        <i class="fas fa-eye" aria-hidden="true"></i>
+        <p>
+          <span id="busuanzi_value_page_pv">
+            <i class="fas fa-spinner fa-spin fa-fw" aria-hidden="true"></i>
+          </span>
+        </p>
+      </a>
+    </div>
+  
 
 
           
@@ -371,71 +377,73 @@
   </section>
 
 
-  <section class="article typo">
-    <div class="article-entry" itemprop="articleBody">
-      <h1 id="新建文章"><a href="#新建文章" class="headerlink" title="新建文章"></a><strong>新建文章</strong></h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new [layout] &lt;title&gt;</span><br></pre></td></tr></table></figure>
-
-<p>layout : 默认为<code>post</code>，可以修改<code>_config.yml</code>中的<code>default_layout</code>参数来指定默认布局  </p>
-<h1 id="布局（Layout）"><a href="#布局（Layout）" class="headerlink" title="布局（Layout）"></a><strong>布局（Layout）</strong></h1><p>Hexo 有三种默认布局：<code>post</code>、<code>page</code> 和 <code>draft</code>。在创建这三种不同类型的文件时，它们将会被保存到不同的路径；而您自定义的其他布局和 <code>post</code> 相同，都将存储到 <code>source/_posts</code> 文件夹中。  </p>
-<table>
-<thead>
-<tr>
-<th><strong>布局</strong></th>
-<th><strong>路径</strong></th>
-</tr>
-</thead>
-<tbody><tr>
-<td><code>post</code></td>
-<td><code>source/_posts</code></td>
-</tr>
-<tr>
-<td><code>page</code></td>
-<td><code>source</code></td>
-</tr>
-<tr>
-<td><code>draft</code></td>
-<td><code>source/_drafts</code></td>
-</tr>
-</tbody></table>
+    <section class="article typo">
+      <div class="article-entry" itemprop="articleBody">
+        <h1 id="开发代码兼容"><a href="#开发代码兼容" class="headerlink" title="开发代码兼容"></a>开发代码兼容</h1><p>Vue CLI 3初始化的项目，构建时会根据<code>package.json</code>中的<code>browserslist</code>配置自动检测需要转译的语言特性，为构建代码转译JavaScript 并为 CSS 添加浏览器前缀，通常只需要修改<code>browserslist</code>即可兼容目标浏览器，例如兼容IE10可以做如下配置：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">"browserslist"</span>: [</span><br><span class="line">    <span class="string">"ie 10"</span></span><br><span class="line">  ]</span><br></pre></td></tr></table></figure>
+<h1 id="依赖包兼容"><a href="#依赖包兼容" class="headerlink" title="依赖包兼容"></a>依赖包兼容</h1><p>但该特性仅对源码(src/)有效，对依赖包无效，当依赖包需要做兼容性转译时，有三种选择：   </p>
+<ol>
+<li>如果确切知道有兼容性问题的依赖包名，可以配置项目根目录下的<code>vue.config.js</code>（默认不存在），将依赖包名添加到<code>transpileDependencies</code>键中，这会为该依赖同时开启语法语法转换和根据使用情况检测 polyfill。例如：<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">module</span>.exports = &#123;</span><br><span class="line">    transpileDependencies: [<span class="string">"vue-plugin-load-script"</span>]       <span class="comment">// 需要编译的依赖包名</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li>如果确切的知道需要转译的语言特性，可以配置根目录下的babel.config.js，为presets的值添加所需要的 polyfill，例如：<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">module</span>.exports = &#123;</span><br><span class="line">  presets: [</span><br><span class="line">    [<span class="string">'@vue/app'</span>, &#123;</span><br><span class="line">      polyfills: [</span><br><span class="line">        <span class="string">'es6.symbol'</span></span><br><span class="line">      ]</span><br><span class="line">    &#125;]</span><br><span class="line">  ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li>然而更多的情况是，我们并不确切的知道项目中引发兼容问题的具体原因，这时还可以配置为根据兼容目标导入所有 polyfill，需要设置babel.config.js为：<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">module</span>.exports = &#123;</span><br><span class="line">  presets: [</span><br><span class="line">    [<span class="string">'@vue/app'</span>, &#123;</span><br><span class="line">        useBuiltIns: <span class="string">'entry'</span></span><br><span class="line">    &#125;]</span><br><span class="line">  ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+同时在入口文件（main.js）第一行添加<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> <span class="string">'@babel/polyfill'</span></span><br></pre></td></tr></table></figure>
+这种方式可能导入代码中不需要的polyfill，从而使打包体积更大。</li>
+</ol>
+<h1 id="备注"><a href="#备注" class="headerlink" title="备注"></a>备注</h1><ul>
+<li>IE10中的node节点列表不支持<code>forEach</code>方法</li>
+<li>IE10中background的参数中如果包括background-size参数，则background-size必须跟在background-position后面，且加上/前缀，例如：<code>background:url(./img/b.jpg) center /cover no-repeat</code>;</li>
+</ul>
 <blockquote>
-<p>如果不希望文章被处理，可以将 Front-Matter 中的 <code>layout:</code> 设为 <code>false</code>。</p>
+<p>转自 <a href="https://refined-x.com/2018/12/04/VueCLI3%20%E5%85%BC%E5%AE%B9%E6%80%A7%E9%85%8D%E7%BD%AE/" target="_blank" rel="noopener">前端路上原创技术文章</a></p>
 </blockquote>
-<h1 id="预览"><a href="#预览" class="headerlink" title="预览"></a><strong>预览</strong></h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-      
-        <div class="readmore">
-          <a href="/Blog/2019/11/20/hexo%E5%86%99%E4%BD%9C%E5%91%BD%E4%BB%A4/" class="flat-box">
-            <i class="fas fa-book-open fa-fw" aria-hidden="true"></i>
-            阅读全文
-          </a>
-        </div>
-      
-    </div>
-    
-      <div class="full-width auto-padding tags">
-        
-          <a href="/Blog/blog/tags/hexo/" rel="nofollow"><i class="fas fa-tag fa-fw"></i> hexo</a>
-        
+
       </div>
-    
-  </section>
-</article>
-
-          </div>
-        
       
-    
-  </section>
-  
-    
-    <!-- 根据主题中的设置决定是否在archive中针对摘要部分的MathJax公式加载mathjax.js文件 -->
-    
-    
+      
+          <div class="prev-next">
+              
+              
+                  <section class="next">
+                      <span class="art-item-right" aria-hidden="true">
+                          <h6>下一页&nbsp;<i class="fas fa-chevron-right" aria-hidden="true"></i></h6>
+                          <h4>
+                              <a href="/Blog/2020/04/02/vue-axios-nginx-node-expresss%E8%B7%A8%E5%9F%9F/" rel="prev" title="vue axios nginx node expresss跨域">
+                                  
+                                      vue axios nginx node expresss跨域
+                                  
+                              </a>
+                          </h4>
+                          
+                              
+                              <h6 class="tags">
+                                  <a class="tag" href="/Blog/blog/tags/vue/"><i class="fas fa-tag fa-fw" aria-hidden="true"></i> vue</a> <a class="tag" href="/Blog/blog/tags/cors/"><i class="fas fa-tag fa-fw" aria-hidden="true"></i> cors</a> <a class="tag" href="/Blog/blog/tags/node/"><i class="fas fa-tag fa-fw" aria-hidden="true"></i> node</a> <a class="tag" href="/Blog/blog/tags/express/"><i class="fas fa-tag fa-fw" aria-hidden="true"></i> express</a>
+                              </h6>
+                          
+                      </span>
+                  </section>
+              
+          </div>
+      
+    </section>
+  </article>
+
+
+
+  <!-- 显示推荐文章和评论 -->
+
+
 
   
 
 
-    
-  
+
+
+
+
+<!-- 根据页面mathjax变量决定是否加载MathJax数学公式js -->
+
+
+
 
 </div>
 <aside class='l_side'>
@@ -443,6 +451,34 @@
     
     
       
+      
+        
+          
+          
+        
+          
+          
+            
+              
+
+            
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
       
         
           
@@ -657,6 +693,114 @@
         
           
           
+            
+              <section class='widget grid'>
+  
+<header class='pure'>
+  <div><i class="fas fa-map-signs fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;站内导航</div>
+  
+</header>
+
+  <div class='content pure'>
+    <ul class="grid navgation">
+      
+        <li><a class="flat-box" title="/Blog/" href="/Blog/"
+          
+          
+          id="Blog">
+          
+            <i class="fas fa-clock fa-fw" aria-hidden="true"></i>
+          
+          近期文章
+        </a></li>
+      
+        <li><a class="flat-box" title="/Blog/blog/archives/" href="/Blog/blog/archives/"
+          
+            rel="nofollow"
+          
+          
+          id="Blogblogarchives">
+          
+            <i class="fas fa-archive fa-fw" aria-hidden="true"></i>
+          
+          文章归档
+        </a></li>
+      
+        <li><a class="flat-box" title="/Blog/projects/" href="/Blog/projects/"
+          
+          
+          id="Blogprojects">
+          
+            <i class="fas fa-code-branch fa-fw" aria-hidden="true"></i>
+          
+          开源项目
+        </a></li>
+      
+        <li><a class="flat-box" title="/Blog/friends/" href="/Blog/friends/"
+          
+            rel="nofollow"
+          
+          
+          id="Blogfriends">
+          
+            <i class="fas fa-link fa-fw" aria-hidden="true"></i>
+          
+          我的友链
+        </a></li>
+      
+        <li><a class="flat-box" title="https://xaoxuu.com/wiki/material-x/" href="https://xaoxuu.com/wiki/material-x/"
+          
+            rel="nofollow"
+          
+          
+          id="https:xaoxuu.comwikimaterial-x">
+          
+            <i class="fas fa-book fa-fw" aria-hidden="true"></i>
+          
+          主题文档
+        </a></li>
+      
+        <li><a class="flat-box" title="/Blog/about/" href="/Blog/about/"
+          
+            rel="nofollow"
+          
+          
+          id="Blogabout">
+          
+            <i class="fas fa-info-circle fa-fw" aria-hidden="true"></i>
+          
+          关于小站
+        </a></li>
+      
+    </ul>
+  </div>
+</section>
+
+            
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+      
+        
+          
+          
+        
+          
+          
+        
+          
+          
         
           
           
@@ -761,91 +905,6 @@
           
         
           
-          
-            
-              <section class='widget grid'>
-  
-<header class='pure'>
-  <div><i class="fas fa-map-signs fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;站内导航</div>
-  
-</header>
-
-  <div class='content pure'>
-    <ul class="grid navgation">
-      
-        <li><a class="flat-box" title="/Blog/" href="/Blog/"
-          
-          
-          id="Blog">
-          
-            <i class="fas fa-clock fa-fw" aria-hidden="true"></i>
-          
-          近期文章
-        </a></li>
-      
-        <li><a class="flat-box" title="/Blog/blog/archives/" href="/Blog/blog/archives/"
-          
-            rel="nofollow"
-          
-          
-          id="Blogblogarchives">
-          
-            <i class="fas fa-archive fa-fw" aria-hidden="true"></i>
-          
-          文章归档
-        </a></li>
-      
-        <li><a class="flat-box" title="/Blog/projects/" href="/Blog/projects/"
-          
-          
-          id="Blogprojects">
-          
-            <i class="fas fa-code-branch fa-fw" aria-hidden="true"></i>
-          
-          开源项目
-        </a></li>
-      
-        <li><a class="flat-box" title="/Blog/friends/" href="/Blog/friends/"
-          
-            rel="nofollow"
-          
-          
-          id="Blogfriends">
-          
-            <i class="fas fa-link fa-fw" aria-hidden="true"></i>
-          
-          我的友链
-        </a></li>
-      
-        <li><a class="flat-box" title="https://xaoxuu.com/wiki/material-x/" href="https://xaoxuu.com/wiki/material-x/"
-          
-            rel="nofollow"
-          
-          
-          id="https:xaoxuu.comwikimaterial-x">
-          
-            <i class="fas fa-book fa-fw" aria-hidden="true"></i>
-          
-          主题文档
-        </a></li>
-      
-        <li><a class="flat-box" title="/Blog/about/" href="/Blog/about/"
-          
-            rel="nofollow"
-          
-          
-          id="Blogabout">
-          
-            <i class="fas fa-info-circle fa-fw" aria-hidden="true"></i>
-          
-          关于小站
-        </a></li>
-      
-    </ul>
-  </div>
-</section>
-
-            
           
         
           
