@@ -324,6 +324,114 @@
       
         
   <h2 class="title">
+    <a href="/Blog/2020/04/21/Promise%E5%BA%94%E7%94%A8%E5%9C%BA%E6%99%AF/">
+      Promise应用场景
+    </a>
+  </h2>
+
+
+      
+      <div class='new-meta-box'>
+        
+          
+        
+          
+            
+  <div class='new-meta-item author'>
+    
+      <a href="https://coryliu.github.io/Blog" rel="nofollow">
+        
+          <img src="https://cdn.jsdelivr.net/gh/CoryLiu/Img-repo@master/static_files/lyb/img/avatar微信图片_20191024112842.png">
+        
+        <p>Liu</p>
+      </a>
+    
+  </div>
+
+
+          
+        
+          
+            <div class="new-meta-item date">
+  <a class='notlink'>
+    <i class="fas fa-calendar-alt" aria-hidden="true"></i>
+    <p>2020-04-21</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+  
+  <div class='new-meta-item category'>
+    <a href='/Blog/blog/categories/Coding/JavaScript/' rel="nofollow">
+      <i class="fas fa-folder-open" aria-hidden="true"></i>
+      <p>Coding&nbsp;/&nbsp;JavaScript</p>
+    </a>
+  </div>
+
+
+          
+        
+          
+            
+
+          
+        
+      </div>
+      
+        <hr>
+      
+    </div>
+  </section>
+
+
+  <section class="article typo">
+    <div class="article-entry" itemprop="articleBody">
+      <h1 id="Promise-all"><a href="#Promise-all" class="headerlink" title="Promise.all"></a>Promise.all</h1><p><strong>语法：Promise.all(iterable)</strong><br><strong>参数：一个可迭代对象，如Array</strong><br><strong>返回值</strong>   </p>
+<ul>
+<li>如果传递的iterable为空，则是已解决的Promise。<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Promise</span>.all([]).then(<span class="function"><span class="params">res</span>=&gt;</span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(res)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure></li>
+<li>异步解析的Promise（如果传递的Iterable不包含Promise）。 请注意，在这种情况下，Google Chrome 58返回已解决的承诺。<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Promise</span>.all([<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>]).then(<span class="function"><span class="params">res</span>=&gt;</span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(res)<span class="comment">//[1,2,3]</span></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+      
+        <div class="readmore">
+          <a href="/Blog/2020/04/21/Promise%E5%BA%94%E7%94%A8%E5%9C%BA%E6%99%AF/" class="flat-box">
+            <i class="fas fa-book-open fa-fw" aria-hidden="true"></i>
+            阅读全文
+          </a>
+        </div>
+      
+    </div>
+    
+      <div class="full-width auto-padding tags">
+        
+          <a href="/Blog/blog/tags/ES6/" rel="nofollow"><i class="fas fa-tag fa-fw"></i> ES6</a>
+        
+          <a href="/Blog/blog/tags/JavaScript/" rel="nofollow"><i class="fas fa-tag fa-fw"></i> JavaScript</a>
+        
+          <a href="/Blog/blog/tags/Promise/" rel="nofollow"><i class="fas fa-tag fa-fw"></i> Promise</a>
+        
+      </div>
+    
+  </section>
+</article>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <article class="post reveal ">
+  
+
+
+  <section class='meta'>
+    
+    
+    <div class="meta" id="header-meta">
+      
+        
+  <h2 class="title">
     <a href="/Blog/2020/04/07/%E6%B5%8F%E8%A7%88%E5%99%A8%E5%85%BC%E5%AE%B9%E6%80%A7%E9%85%8D%E7%BD%AE/">
       浏览器兼容性配置
     </a>
@@ -1256,109 +1364,6 @@
           </div>
         
       
-        
-          <div class='post-wrapper'>
-            <article class="post reveal ">
-  
-
-
-  <section class='meta'>
-    
-    
-    <div class="meta" id="header-meta">
-      
-        
-  <h2 class="title">
-    <a href="/Blog/2020/02/11/%E8%AE%B0%E5%BD%95%E4%B8%8B%E6%95%B0%E7%BB%84%E6%93%8D%E4%BD%9C%E4%B8%AD%E7%9A%84%E5%87%A0%E4%B8%AA%E6%96%B9%E6%B3%95/">
-      记录下数组操作中的几个方法
-    </a>
-  </h2>
-
-
-      
-      <div class='new-meta-box'>
-        
-          
-        
-          
-            
-  <div class='new-meta-item author'>
-    
-      <a href="https://coryliu.github.io/Blog" rel="nofollow">
-        
-          <img src="https://cdn.jsdelivr.net/gh/CoryLiu/Img-repo@master/static_files/lyb/img/avatar微信图片_20191024112842.png">
-        
-        <p>Liu</p>
-      </a>
-    
-  </div>
-
-
-          
-        
-          
-            <div class="new-meta-item date">
-  <a class='notlink'>
-    <i class="fas fa-calendar-alt" aria-hidden="true"></i>
-    <p>2020-02-11</p>
-  </a>
-</div>
-
-          
-        
-          
-            
-  
-  <div class='new-meta-item category'>
-    <a href='/Blog/blog/categories/Coding/JavaScript/' rel="nofollow">
-      <i class="fas fa-folder-open" aria-hidden="true"></i>
-      <p>Coding&nbsp;/&nbsp;JavaScript</p>
-    </a>
-  </div>
-
-
-          
-        
-          
-            
-
-          
-        
-      </div>
-      
-        <hr>
-      
-    </div>
-  </section>
-
-
-  <section class="article typo">
-    <div class="article-entry" itemprop="articleBody">
-      
-      
-        <div class="readmore">
-          <a href="/Blog/2020/02/11/%E8%AE%B0%E5%BD%95%E4%B8%8B%E6%95%B0%E7%BB%84%E6%93%8D%E4%BD%9C%E4%B8%AD%E7%9A%84%E5%87%A0%E4%B8%AA%E6%96%B9%E6%B3%95/" class="flat-box">
-            <i class="fas fa-book-open fa-fw" aria-hidden="true"></i>
-            阅读全文
-          </a>
-        </div>
-      
-    </div>
-    
-      <div class="full-width auto-padding tags">
-        
-          <a href="/Blog/blog/tags/JavaScript/" rel="nofollow"><i class="fas fa-tag fa-fw"></i> JavaScript</a>
-        
-          <a href="/Blog/blog/tags/Array/" rel="nofollow"><i class="fas fa-tag fa-fw"></i> Array</a>
-        
-      </div>
-    
-  </section>
-</article>
-
-          </div>
-        
-      
     
   </section>
   
@@ -1429,7 +1434,7 @@
     <div class='content pure'>
       <ul class="entry">
         
-          <li><a class="flat-box" title="/Blog/blog/categories/Coding/" href="/Blog/blog/categories/Coding/"><div class='name'>Coding</div><div class='badge'>(22)</div></a></li>
+          <li><a class="flat-box" title="/Blog/blog/categories/Coding/" href="/Blog/blog/categories/Coding/"><div class='name'>Coding</div><div class='badge'>(23)</div></a></li>
         
           <li><a class="flat-box child" title="/Blog/blog/categories/Coding/Django/" href="/Blog/blog/categories/Coding/Django/"><div class='name'>Django</div><div class='badge'>(1)</div></a></li>
         
@@ -1437,7 +1442,7 @@
         
           <li><a class="flat-box child" title="/Blog/blog/categories/Coding/Hexo/" href="/Blog/blog/categories/Coding/Hexo/"><div class='name'>Hexo</div><div class='badge'>(1)</div></a></li>
         
-          <li><a class="flat-box child" title="/Blog/blog/categories/Coding/JavaScript/" href="/Blog/blog/categories/Coding/JavaScript/"><div class='name'>JavaScript</div><div class='badge'>(6)</div></a></li>
+          <li><a class="flat-box child" title="/Blog/blog/categories/Coding/JavaScript/" href="/Blog/blog/categories/Coding/JavaScript/"><div class='name'>JavaScript</div><div class='badge'>(7)</div></a></li>
         
           <li><a class="flat-box child" title="/Blog/blog/categories/Coding/Travis/" href="/Blog/blog/categories/Coding/Travis/"><div class='name'>Travis</div><div class='badge'>(1)</div></a></li>
         
@@ -1511,7 +1516,7 @@
 </header>
 
     <div class='content pure'>
-      <a href="/Blog/blog/tags/Array/" style="font-size: 14px; color: #999">Array</a> <a href="/Blog/blog/tags/Coding/" style="font-size: 17.33px; color: #828282">Coding</a> <a href="/Blog/blog/tags/Django/" style="font-size: 14px; color: #999">Django</a> <a href="/Blog/blog/tags/Docker/" style="font-size: 14px; color: #999">Docker</a> <a href="/Blog/blog/tags/ES6/" style="font-size: 17.33px; color: #828282">ES6</a> <a href="/Blog/blog/tags/Express/" style="font-size: 14px; color: #999">Express</a> <a href="/Blog/blog/tags/Github/" style="font-size: 14px; color: #999">Github</a> <a href="/Blog/blog/tags/Hexo/" style="font-size: 14px; color: #999">Hexo</a> <a href="/Blog/blog/tags/IE%E5%85%BC%E5%AE%B9/" style="font-size: 14px; color: #999">IE兼容</a> <a href="/Blog/blog/tags/JavaScript/" style="font-size: 24px; color: #555">JavaScript</a> <a href="/Blog/blog/tags/Node-js/" style="font-size: 17.33px; color: #828282">Node.js</a> <a href="/Blog/blog/tags/Promise/" style="font-size: 14px; color: #999">Promise</a> <a href="/Blog/blog/tags/Travis/" style="font-size: 14px; color: #999">Travis</a> <a href="/Blog/blog/tags/Vue/" style="font-size: 24px; color: #555">Vue</a> <a href="/Blog/blog/tags/Vue-js/" style="font-size: 20.67px; color: #6c6c6c">Vue.js</a> <a href="/Blog/blog/tags/axios/" style="font-size: 14px; color: #999">axios</a> <a href="/Blog/blog/tags/call/" style="font-size: 14px; color: #999">call</a> <a href="/Blog/blog/tags/cors/" style="font-size: 14px; color: #999">cors</a> <a href="/Blog/blog/tags/css/" style="font-size: 14px; color: #999">css</a> <a href="/Blog/blog/tags/express/" style="font-size: 14px; color: #999">express</a> <a href="/Blog/blog/tags/hexo/" style="font-size: 14px; color: #999">hexo</a> <a href="/Blog/blog/tags/node/" style="font-size: 14px; color: #999">node</a> <a href="/Blog/blog/tags/uni-app/" style="font-size: 14px; color: #999">uni-app</a> <a href="/Blog/blog/tags/vue/" style="font-size: 14px; color: #999">vue</a> <a href="/Blog/blog/tags/yarn/" style="font-size: 14px; color: #999">yarn</a> <a href="/Blog/blog/tags/%E4%B9%90%E7%90%86/" style="font-size: 17.33px; color: #828282">乐理</a> <a href="/Blog/blog/tags/%E5%89%8D%E7%AB%AF/" style="font-size: 14px; color: #999">前端</a> <a href="/Blog/blog/tags/%E7%AE%AD%E5%A4%B4%E5%87%BD%E6%95%B0/" style="font-size: 14px; color: #999">箭头函数</a>
+      <a href="/Blog/blog/tags/Array/" style="font-size: 14px; color: #999">Array</a> <a href="/Blog/blog/tags/Coding/" style="font-size: 16.5px; color: #888">Coding</a> <a href="/Blog/blog/tags/Django/" style="font-size: 14px; color: #999">Django</a> <a href="/Blog/blog/tags/Docker/" style="font-size: 14px; color: #999">Docker</a> <a href="/Blog/blog/tags/ES6/" style="font-size: 19px; color: #777">ES6</a> <a href="/Blog/blog/tags/Express/" style="font-size: 14px; color: #999">Express</a> <a href="/Blog/blog/tags/Github/" style="font-size: 14px; color: #999">Github</a> <a href="/Blog/blog/tags/Hexo/" style="font-size: 14px; color: #999">Hexo</a> <a href="/Blog/blog/tags/IE%E5%85%BC%E5%AE%B9/" style="font-size: 14px; color: #999">IE兼容</a> <a href="/Blog/blog/tags/JavaScript/" style="font-size: 24px; color: #555">JavaScript</a> <a href="/Blog/blog/tags/Node-js/" style="font-size: 16.5px; color: #888">Node.js</a> <a href="/Blog/blog/tags/Promise/" style="font-size: 16.5px; color: #888">Promise</a> <a href="/Blog/blog/tags/Travis/" style="font-size: 14px; color: #999">Travis</a> <a href="/Blog/blog/tags/Vue/" style="font-size: 21.5px; color: #666">Vue</a> <a href="/Blog/blog/tags/Vue-js/" style="font-size: 19px; color: #777">Vue.js</a> <a href="/Blog/blog/tags/axios/" style="font-size: 14px; color: #999">axios</a> <a href="/Blog/blog/tags/call/" style="font-size: 14px; color: #999">call</a> <a href="/Blog/blog/tags/cors/" style="font-size: 14px; color: #999">cors</a> <a href="/Blog/blog/tags/css/" style="font-size: 14px; color: #999">css</a> <a href="/Blog/blog/tags/express/" style="font-size: 14px; color: #999">express</a> <a href="/Blog/blog/tags/hexo/" style="font-size: 14px; color: #999">hexo</a> <a href="/Blog/blog/tags/node/" style="font-size: 14px; color: #999">node</a> <a href="/Blog/blog/tags/uni-app/" style="font-size: 14px; color: #999">uni-app</a> <a href="/Blog/blog/tags/vue/" style="font-size: 14px; color: #999">vue</a> <a href="/Blog/blog/tags/yarn/" style="font-size: 14px; color: #999">yarn</a> <a href="/Blog/blog/tags/%E4%B9%90%E7%90%86/" style="font-size: 16.5px; color: #888">乐理</a> <a href="/Blog/blog/tags/%E5%89%8D%E7%AB%AF/" style="font-size: 14px; color: #999">前端</a> <a href="/Blog/blog/tags/%E7%AE%AD%E5%A4%B4%E5%87%BD%E6%95%B0/" style="font-size: 14px; color: #999">箭头函数</a>
     </div>
   </section>
 

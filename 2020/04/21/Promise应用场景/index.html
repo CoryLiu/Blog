@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   
-  <title>阿b的Blog</title>
+  <title>Promise应用场景 | 阿b的Blog</title>
   
   
 
@@ -48,7 +48,7 @@
   
   
   <div class="cover-wrapper">
-    <cover class='cover page half'>
+    <cover class='cover post half'>
       
         
   <h1 class='title'>阿b的Blog</h1>
@@ -283,7 +283,7 @@
       <div class='l_main'>
   
 
-  <article id="page" class="post white-box article-type-page" itemscope itemprop="blogPost">
+  <article id="post" class="post white-box article-type-post" itemscope itemprop="blogPost">
     
 
 
@@ -295,8 +295,8 @@
         
   
     <h1 class="title">
-      <a href="/Blog/friends/index.html">
-        2020-04-23
+      <a href="/Blog/2020/04/21/Promise%E5%BA%94%E7%94%A8%E5%9C%BA%E6%99%AF/">
+        Promise应用场景
       </a>
     </h1>
   
@@ -327,7 +327,7 @@
             <div class="new-meta-item date">
   <a class='notlink'>
     <i class="fas fa-calendar-alt" aria-hidden="true"></i>
-    <p>2020-04-23</p>
+    <p>2020-04-21</p>
   </a>
 </div>
 
@@ -335,6 +335,14 @@
         
           
             
+  
+  <div class='new-meta-item category'>
+    <a href='/Blog/blog/categories/Coding/JavaScript/' rel="nofollow">
+      <i class="fas fa-folder-open" aria-hidden="true"></i>
+      <p>Coding&nbsp;/&nbsp;JavaScript</p>
+    </a>
+  </div>
+
 
           
         
@@ -371,15 +379,139 @@
 
     <section class="article typo">
       <div class="article-entry" itemprop="articleBody">
-        <h2 id="这个人很孤独，木得盆友"><a href="#这个人很孤独，木得盆友" class="headerlink" title="这个人很孤独，木得盆友"></a>这个人很孤独，木得盆友</h2><br>
-
-
-<blockquote>
-<p>名称： abin’s blog<br>头像： <a href="https://cdn.jsdelivr.net/gh/CoryLiu/Img-repo@master/static_files/lyb/img/avatar头像.jpg" target="_blank" rel="noopener">https://cdn.jsdelivr.net/gh/CoryLiu/Img-repo@master/static_files/lyb/img/avatar头像.jpg</a><br>网址： <a href="https://coryliu.github.io/Blog/">https://coryliu.github.io/Blog/</a><br>标签： hexo</p>
-</blockquote>
+        <h1 id="Promise-all"><a href="#Promise-all" class="headerlink" title="Promise.all"></a>Promise.all</h1><p><strong>语法：Promise.all(iterable)</strong><br><strong>参数：一个可迭代对象，如Array</strong><br><strong>返回值</strong>   </p>
+<ul>
+<li>如果传递的iterable为空，则是已解决的Promise。<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Promise</span>.all([]).then(<span class="function"><span class="params">res</span>=&gt;</span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(res)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure></li>
+<li>异步解析的Promise（如果传递的Iterable不包含Promise）。 请注意，在这种情况下，Google Chrome 58返回已解决的承诺。<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Promise</span>.all([<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>]).then(<span class="function"><span class="params">res</span>=&gt;</span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(res)<span class="comment">//[1,2,3]</span></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<a id="more"></a></li>
+<li>当给定可迭代对象中的所有promise已解决，或者任何promise均被拒绝时，此返回的promise将被异步解析/拒绝（堆栈为空时）<ul>
+<li>当给定可迭代对象中的所有promise 已解决<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> promise1 = <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function">(<span class="params">resolve,reject</span>)=&gt;</span>&#123;</span><br><span class="line">    resolve(<span class="number">1</span>)</span><br><span class="line">&#125;)</span><br><span class="line"><span class="keyword">let</span> promise2 = <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function">(<span class="params">resolve,reject</span>)=&gt;</span>&#123;</span><br><span class="line">    resolve(<span class="number">2</span>)</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="built_in">Promise</span>.all([promise1,promise2,<span class="number">3</span>]).then(<span class="function"><span class="params">res</span>=&gt;</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(res)<span class="comment">//[1,2,3]</span></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure></li>
+<li></li>
+</ul>
+</li>
+</ul>
 
       </div>
       
+        <br>
+        
+
+
+  <section class='meta' id="footer-meta">
+    <div class='new-meta-box'>
+      
+        
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-04-23T00:58:00+00:00">
+  <a class='notlink'>
+    <i class="fas fa-clock" aria-hidden="true"></i>
+    <p>更新于 2020年4月23日</p>
+  </a>
+</div>
+
+        
+      
+        
+          
+  
+  <div class="new-meta-item meta-tags"><a class="tag" href="/Blog/blog/tags/ES6/" rel="nofollow"><i class="fas fa-tag" aria-hidden="true"></i><p>ES6</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/Blog/blog/tags/JavaScript/" rel="nofollow"><i class="fas fa-tag" aria-hidden="true"></i><p>JavaScript</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/Blog/blog/tags/Promise/" rel="nofollow"><i class="fas fa-tag" aria-hidden="true"></i><p>Promise</p></a></div>
+
+
+        
+      
+        
+          
+  <div class="new-meta-item share -mob-share-list">
+  <div class="-mob-share-list share-body">
+    
+      
+        <a class="-mob-share-qq" title="QQ好友" rel="external nofollow noopener noreferrer"
+          
+          href="http://connect.qq.com/widget/shareqq/index.html?url=https://coryliu.github.io/Blog/2020/04/21/Promise%E5%BA%94%E7%94%A8%E5%9C%BA%E6%99%AF/&title=Promise应用场景 | 阿b的Blog&pics=https://cdn.jsdelivr.net/gh/CoryLiu/Img-repo@master/static_files/lyb/img/avatar微信图片_20191024112842.png&summary=Promise.all语法：Promise.all(iterable)参数：一个可迭代对象，如Array返回值   
+
+如果传递的iterable为空，则是已解决的Promise。123Promise.all([]).then(res=&gt;&#123;  console.log(res)&#125;)
+异步解析的Promise（如果传递的Iterable不包含Promise）。 请注意，在这种情况下，Google Chrome 58返回已解决的承诺。123Promise.all([1,2,3]).then(res=&gt;&#123;  console.log(res)//[1,2,3]&#125;)"
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/xaoxuu/assets@19.1.9/logo/128/qq.png">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-qzone" title="QQ空间" rel="external nofollow noopener noreferrer"
+          
+          href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://coryliu.github.io/Blog/2020/04/21/Promise%E5%BA%94%E7%94%A8%E5%9C%BA%E6%99%AF/&title=Promise应用场景 | 阿b的Blog&pics=https://cdn.jsdelivr.net/gh/CoryLiu/Img-repo@master/static_files/lyb/img/avatar微信图片_20191024112842.png&summary=Promise.all语法：Promise.all(iterable)参数：一个可迭代对象，如Array返回值   
+
+如果传递的iterable为空，则是已解决的Promise。123Promise.all([]).then(res=&gt;&#123;  console.log(res)&#125;)
+异步解析的Promise（如果传递的Iterable不包含Promise）。 请注意，在这种情况下，Google Chrome 58返回已解决的承诺。123Promise.all([1,2,3]).then(res=&gt;&#123;  console.log(res)//[1,2,3]&#125;)"
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/xaoxuu/assets@19.1.9/logo/128/qzone.png">
+          
+        </a>
+      
+    
+      
+        <a class='qrcode' rel="external nofollow noopener noreferrer" href='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPYAAAD2CAAAAADAeSUUAAADOElEQVR42u3awW7rSAwEwPz/T3uBd11Y6uY4gMWUToZtWVOTA8Pm/PzE1+vf9e6dd5/+//3rT/N3rp/+sQsbGxv7IezX5XX907Nl5Xclq2rvwsbGxt7KviYlBSxfXPv7J+t8+z42Njb2n2RfU/O78nZl9pvY2NjY2MmDZ81Avn3J1mBjY2Njz+KbWcE72bKk+fnFLA0bGxv769ntoPebX//ifBsbGxv7K9mv0ZW0Me0QN294rtuVaP3Y2NjYi9h5cNO2HPld7a/NxgbRXwMbGxt7HTtfRFvkrmOpHNAeFYoKGDY2Nvaj2LMxQDtUmG3irNmIthsbGxt7NftkrNt+52QYnK/2ZrKNjY2NvYI9i5naBSXR0myQ0DYn2NjY2JvYbYg/Kx4Jph1OtM3PzVOwsbGxH8tuY5rZwZq2UCUj3rYFejsPwcbGxn44Ow9x8n/uTzaiPdCTvL75m2NjY2M/nN3elsNmafwwEmoHz9jY2NiL2CclKg+S2lI0Gx7X0RU2Njb2UnZ+mCaPe9ox7ex1fagIGxsbewW7LT9ts5GMbNvyM2tXsLGxsbey8yo3K3InQ4WiAp/8AbCxsbEXsfNwpw3uT8pYO2xIijE2Njb2Pnb+4LyM5Y+PThWVB4CSlWNjY2PvY5+0EPm9s9D/ZDzwdjuwsbGxF7HPg6dZDJTHUrMY67xNwsbGxn4Wux2y5ns5Kzl5QTpZGzY2NvYOdnsUsr2rbWnymCn/FBsbG3s3exbTJwOAFjMbJBxFSNjY2Ngr2G0BS4L+5NO85ZiNn2+eiI2Njf1n2HkBy6tDPgzOm6Ikrvppl4iNjY39EPbsp/MQpy1452U1L37Y2NjYW9ltTDM7NDMrVLN0qKje2NjY2I9lz5qTWQNwMvSNALPvY2NjYz+Q/SqvlprHRkn8dPJNbGxs7K3sWQFox7qfLV1tOWy3GxsbG/uJ7FnROj+4k4+BZ8cubxTY2NjY69ht0TopJ7Pvz4KkD585xcbGxl7BzkcF+ZGa6z5pVixvNhQbGxv7T7JzWFvAfuOum4gKGxsbex07Ly1JmZlFSHlg1G4ZNjY29m52O0xt45vzcOp8Cz4w38bGxsb+RvZ//QToTHWFF0cAAAAASUVORK5CYII='>
+        
+          <img src="https://cdn.jsdelivr.net/gh/xaoxuu/assets@19.1.9/logo/128/wechat.png">
+        
+        </a>
+      
+    
+      
+        <a class="-mob-share-weibo" title="微博" rel="external nofollow noopener noreferrer"
+          
+          href="http://service.weibo.com/share/share.php?url=https://coryliu.github.io/Blog/2020/04/21/Promise%E5%BA%94%E7%94%A8%E5%9C%BA%E6%99%AF/&title=Promise应用场景 | 阿b的Blog&pics=https://cdn.jsdelivr.net/gh/CoryLiu/Img-repo@master/static_files/lyb/img/avatar微信图片_20191024112842.png&summary=Promise.all语法：Promise.all(iterable)参数：一个可迭代对象，如Array返回值   
+
+如果传递的iterable为空，则是已解决的Promise。123Promise.all([]).then(res=&gt;&#123;  console.log(res)&#125;)
+异步解析的Promise（如果传递的Iterable不包含Promise）。 请注意，在这种情况下，Google Chrome 58返回已解决的承诺。123Promise.all([1,2,3]).then(res=&gt;&#123;  console.log(res)//[1,2,3]&#125;)"
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/xaoxuu/assets@19.1.9/logo/128/weibo.png">
+          
+        </a>
+      
+    
+  </div>
+</div>
+
+
+
+        
+      
+    </div>
+  </section>
+
+
+      
+      
+          <div class="prev-next">
+              
+              
+                  <section class="next">
+                      <span class="art-item-right" aria-hidden="true">
+                          <h6>下一页&nbsp;<i class="fas fa-chevron-right" aria-hidden="true"></i></h6>
+                          <h4>
+                              <a href="/Blog/2020/04/07/%E6%B5%8F%E8%A7%88%E5%99%A8%E5%85%BC%E5%AE%B9%E6%80%A7%E9%85%8D%E7%BD%AE/" rel="prev" title="浏览器兼容性配置">
+                                  
+                                      浏览器兼容性配置
+                                  
+                              </a>
+                          </h4>
+                          
+                              
+                              <h6 class="tags">
+                                  <a class="tag" href="/Blog/blog/tags/Vue-js/"><i class="fas fa-tag fa-fw" aria-hidden="true"></i> Vue.js</a> <a class="tag" href="/Blog/blog/tags/IE%E5%85%BC%E5%AE%B9/"><i class="fas fa-tag fa-fw" aria-hidden="true"></i> IE兼容</a>
+                              </h6>
+                          
+                      </span>
+                  </section>
+              
+          </div>
       
     </section>
   </article>
@@ -401,6 +533,13 @@
 
 
 
+  <script>
+    window.subData = {
+      title: 'Promise应用场景',
+      tools: true
+    }
+  </script>
+
 
 </div>
 <aside class='l_side'>
@@ -417,6 +556,20 @@
           
             
               
+  <section class='widget toc-wrapper'>
+    
+<header class='pure'>
+  <div><i class="fas fa-list fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;本文目录</div>
+  
+    <!-- <div class='wrapper'><a class="s-toc rightBtn" rel="external nofollow noopener noreferrer" href="javascript:void(0)"><i class="fas fa-thumbtack fa-fw"></i></a></div> -->
+  
+</header>
+
+    <div class='content pure'>
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Promise-all"><span class="toc-text">Promise.all</span></a></li></ol>
+    </div>
+  </section>
+
 
             
           

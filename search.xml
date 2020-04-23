@@ -4,6 +4,37 @@
   
     
     <entry>
+      <title>Promise应用场景</title>
+      <link href="/Blog/2020/04/21/Promise%E5%BA%94%E7%94%A8%E5%9C%BA%E6%99%AF/"/>
+      <url>/Blog/2020/04/21/Promise%E5%BA%94%E7%94%A8%E5%9C%BA%E6%99%AF/</url>
+      
+        <content type="html"><![CDATA[<h1 id="Promise-all"><a href="#Promise-all" class="headerlink" title="Promise.all"></a>Promise.all</h1><p><strong>语法：Promise.all(iterable)</strong><br><strong>参数：一个可迭代对象，如Array</strong><br><strong>返回值</strong>   </p><ul><li>如果传递的iterable为空，则是已解决的Promise。<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Promise</span>.all([]).then(<span class="function"><span class="params">res</span>=&gt;</span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(res)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure></li><li>异步解析的Promise（如果传递的Iterable不包含Promise）。 请注意，在这种情况下，Google Chrome 58返回已解决的承诺。<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Promise</span>.all([<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>]).then(<span class="function"><span class="params">res</span>=&gt;</span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(res)<span class="comment">//[1,2,3]</span></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure><a id="more"></a></li><li>当给定可迭代对象中的所有promise已解决，或者任何promise均被拒绝时，此返回的promise将被异步解析/拒绝（堆栈为空时）<ul><li>当给定可迭代对象中的所有promise 已解决<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> promise1 = <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function">(<span class="params">resolve,reject</span>)=&gt;</span>&#123;</span><br><span class="line">    resolve(<span class="number">1</span>)</span><br><span class="line">&#125;)</span><br><span class="line"><span class="keyword">let</span> promise2 = <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function">(<span class="params">resolve,reject</span>)=&gt;</span>&#123;</span><br><span class="line">    resolve(<span class="number">2</span>)</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="built_in">Promise</span>.all([promise1,promise2,<span class="number">3</span>]).then(<span class="function"><span class="params">res</span>=&gt;</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(res)<span class="comment">//[1,2,3]</span></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure></li><li></li></ul></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> Coding </category>
+          
+          <category> JavaScript </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> ES6 </tag>
+            
+            <tag> JavaScript </tag>
+            
+            <tag> Promise </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>浏览器兼容性配置</title>
       <link href="/Blog/2020/04/07/%E6%B5%8F%E8%A7%88%E5%99%A8%E5%85%BC%E5%AE%B9%E6%80%A7%E9%85%8D%E7%BD%AE/"/>
       <url>/Blog/2020/04/07/%E6%B5%8F%E8%A7%88%E5%99%A8%E5%85%BC%E5%AE%B9%E6%80%A7%E9%85%8D%E7%BD%AE/</url>
