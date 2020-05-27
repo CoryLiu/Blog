@@ -393,6 +393,13 @@
 <p>Windows</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">set</span> DEBUG=myapp:*</span><br><span class="line">npm start</span><br></pre></td></tr></table></figure>
 <h1 id="生成示例的文件结构"><a href="#生成示例的文件结构" class="headerlink" title="生成示例的文件结构"></a>生成示例的文件结构</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">.</span><br><span class="line">├── app.js</span><br><span class="line">├── bin</span><br><span class="line">│   └── www</span><br><span class="line">├── package.json</span><br><span class="line">├── public</span><br><span class="line">│   ├── images</span><br><span class="line">│   ├── javascripts</span><br><span class="line">│   └── stylesheets</span><br><span class="line">│       └── style.css</span><br><span class="line">├── routes</span><br><span class="line">│   ├── index.js</span><br><span class="line">│   └── users.js</span><br><span class="line">└── views</span><br><span class="line">    ├── error.pug</span><br><span class="line">    ├── index.pug</span><br><span class="line">    └── layout.pug</span><br><span class="line"></span><br><span class="line">7 directories, 9 files</span><br></pre></td></tr></table></figure>
+
+<h1 id="express-MongoDB-RestfulApi"><a href="#express-MongoDB-RestfulApi" class="headerlink" title="express + MongoDB RestfulApi"></a>express + MongoDB RestfulApi</h1><ul>
+<li>express</li>
+<li>mongoose</li>
+<li>MongoDB</li>
+</ul>
+
       </div>
       
         <br>
@@ -403,10 +410,10 @@
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-04-23T00:58:00+00:00">
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-05-27T01:35:48+00:00">
   <a class='notlink'>
     <i class="fas fa-clock" aria-hidden="true"></i>
-    <p>更新于 2020年4月23日</p>
+    <p>更新于 2020年5月27日</p>
   </a>
 </div>
 
@@ -578,7 +585,7 @@
 </header>
 
     <div class='content pure'>
-      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#安装"><span class="toc-text">安装</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Express应用程序生成器"><span class="toc-text">Express应用程序生成器</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#express命令行参数"><span class="toc-text">express命令行参数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#启动app"><span class="toc-text">启动app</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#生成示例的文件结构"><span class="toc-text">生成示例的文件结构</span></a></li></ol>
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#安装"><span class="toc-text">安装</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Express应用程序生成器"><span class="toc-text">Express应用程序生成器</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#express命令行参数"><span class="toc-text">express命令行参数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#启动app"><span class="toc-text">启动app</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#生成示例的文件结构"><span class="toc-text">生成示例的文件结构</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#express-MongoDB-RestfulApi"><span class="toc-text">express + MongoDB RestfulApi</span></a></li></ol>
     </div>
   </section>
 
@@ -635,9 +642,9 @@
     <div class='content pure'>
       <ul class="entry">
         
-          <li><a class="flat-box" title="/Blog/blog/categories/Coding/" href="/Blog/blog/categories/Coding/"><div class='name'>Coding</div><div class='badge'>(23)</div></a></li>
+          <li><a class="flat-box" title="/Blog/blog/categories/Coding/" href="/Blog/blog/categories/Coding/"><div class='name'>Coding</div><div class='badge'>(24)</div></a></li>
         
-          <li><a class="flat-box child" title="/Blog/blog/categories/Coding/Django/" href="/Blog/blog/categories/Coding/Django/"><div class='name'>Django</div><div class='badge'>(1)</div></a></li>
+          <li><a class="flat-box child" title="/Blog/blog/categories/Coding/Django/" href="/Blog/blog/categories/Coding/Django/"><div class='name'>Django</div><div class='badge'>(2)</div></a></li>
         
           <li><a class="flat-box child" title="/Blog/blog/categories/Coding/Express/" href="/Blog/blog/categories/Coding/Express/"><div class='name'>Express</div><div class='badge'>(1)</div></a></li>
         
@@ -660,6 +667,10 @@
           <li><a class="flat-box" title="/Blog/blog/categories/Guitar/" href="/Blog/blog/categories/Guitar/"><div class='name'>Guitar</div><div class='badge'>(2)</div></a></li>
         
           <li><a class="flat-box child" title="/Blog/blog/categories/Guitar/%E4%B9%90%E7%90%86/" href="/Blog/blog/categories/Guitar/%E4%B9%90%E7%90%86/"><div class='name'>乐理</div><div class='badge'>(2)</div></a></li>
+        
+          <li><a class="flat-box" title="/Blog/blog/categories/Nginx/" href="/Blog/blog/categories/Nginx/"><div class='name'>Nginx</div><div class='badge'>(1)</div></a></li>
+        
+          <li><a class="flat-box child" title="/Blog/blog/categories/Nginx/%E9%83%A8%E7%BD%B2%E7%9B%B8%E5%85%B3/" href="/Blog/blog/categories/Nginx/%E9%83%A8%E7%BD%B2%E7%9B%B8%E5%85%B3/"><div class='name'>部署相关</div><div class='badge'>(1)</div></a></li>
         
           <li><a class="flat-box" title="/Blog/blog/categories/%E5%85%B3%E4%BA%8E%E5%8D%9A%E5%AE%A2/" href="/Blog/blog/categories/%E5%85%B3%E4%BA%8E%E5%8D%9A%E5%AE%A2/"><div class='name'>关于博客</div><div class='badge'>(1)</div></a></li>
         
@@ -717,7 +728,7 @@
 </header>
 
     <div class='content pure'>
-      <a href="/Blog/blog/tags/Array/" style="font-size: 14px; color: #999">Array</a> <a href="/Blog/blog/tags/Coding/" style="font-size: 16.5px; color: #888">Coding</a> <a href="/Blog/blog/tags/Django/" style="font-size: 14px; color: #999">Django</a> <a href="/Blog/blog/tags/Docker/" style="font-size: 14px; color: #999">Docker</a> <a href="/Blog/blog/tags/ES6/" style="font-size: 19px; color: #777">ES6</a> <a href="/Blog/blog/tags/Express/" style="font-size: 14px; color: #999">Express</a> <a href="/Blog/blog/tags/Github/" style="font-size: 14px; color: #999">Github</a> <a href="/Blog/blog/tags/Hexo/" style="font-size: 14px; color: #999">Hexo</a> <a href="/Blog/blog/tags/IE%E5%85%BC%E5%AE%B9/" style="font-size: 14px; color: #999">IE兼容</a> <a href="/Blog/blog/tags/JavaScript/" style="font-size: 24px; color: #555">JavaScript</a> <a href="/Blog/blog/tags/Node-js/" style="font-size: 16.5px; color: #888">Node.js</a> <a href="/Blog/blog/tags/Promise/" style="font-size: 16.5px; color: #888">Promise</a> <a href="/Blog/blog/tags/Travis/" style="font-size: 14px; color: #999">Travis</a> <a href="/Blog/blog/tags/Vue/" style="font-size: 21.5px; color: #666">Vue</a> <a href="/Blog/blog/tags/Vue-js/" style="font-size: 19px; color: #777">Vue.js</a> <a href="/Blog/blog/tags/axios/" style="font-size: 14px; color: #999">axios</a> <a href="/Blog/blog/tags/call/" style="font-size: 14px; color: #999">call</a> <a href="/Blog/blog/tags/cors/" style="font-size: 14px; color: #999">cors</a> <a href="/Blog/blog/tags/css/" style="font-size: 14px; color: #999">css</a> <a href="/Blog/blog/tags/express/" style="font-size: 14px; color: #999">express</a> <a href="/Blog/blog/tags/hexo/" style="font-size: 14px; color: #999">hexo</a> <a href="/Blog/blog/tags/node/" style="font-size: 14px; color: #999">node</a> <a href="/Blog/blog/tags/uni-app/" style="font-size: 14px; color: #999">uni-app</a> <a href="/Blog/blog/tags/vue/" style="font-size: 14px; color: #999">vue</a> <a href="/Blog/blog/tags/yarn/" style="font-size: 14px; color: #999">yarn</a> <a href="/Blog/blog/tags/%E4%B9%90%E7%90%86/" style="font-size: 16.5px; color: #888">乐理</a> <a href="/Blog/blog/tags/%E5%89%8D%E7%AB%AF/" style="font-size: 14px; color: #999">前端</a> <a href="/Blog/blog/tags/%E7%AE%AD%E5%A4%B4%E5%87%BD%E6%95%B0/" style="font-size: 14px; color: #999">箭头函数</a>
+      <a href="/Blog/blog/tags/Array/" style="font-size: 14px; color: #999">Array</a> <a href="/Blog/blog/tags/Coding/" style="font-size: 16.5px; color: #888">Coding</a> <a href="/Blog/blog/tags/Django/" style="font-size: 16.5px; color: #888">Django</a> <a href="/Blog/blog/tags/Docker/" style="font-size: 14px; color: #999">Docker</a> <a href="/Blog/blog/tags/ES6/" style="font-size: 19px; color: #777">ES6</a> <a href="/Blog/blog/tags/Express/" style="font-size: 14px; color: #999">Express</a> <a href="/Blog/blog/tags/Github/" style="font-size: 14px; color: #999">Github</a> <a href="/Blog/blog/tags/Hexo/" style="font-size: 14px; color: #999">Hexo</a> <a href="/Blog/blog/tags/IE%E5%85%BC%E5%AE%B9/" style="font-size: 14px; color: #999">IE兼容</a> <a href="/Blog/blog/tags/JavaScript/" style="font-size: 24px; color: #555">JavaScript</a> <a href="/Blog/blog/tags/Nginx/" style="font-size: 14px; color: #999">Nginx</a> <a href="/Blog/blog/tags/Node-js/" style="font-size: 16.5px; color: #888">Node.js</a> <a href="/Blog/blog/tags/Promise/" style="font-size: 16.5px; color: #888">Promise</a> <a href="/Blog/blog/tags/Travis/" style="font-size: 14px; color: #999">Travis</a> <a href="/Blog/blog/tags/Vue/" style="font-size: 21.5px; color: #666">Vue</a> <a href="/Blog/blog/tags/Vue-js/" style="font-size: 19px; color: #777">Vue.js</a> <a href="/Blog/blog/tags/axios/" style="font-size: 14px; color: #999">axios</a> <a href="/Blog/blog/tags/call/" style="font-size: 14px; color: #999">call</a> <a href="/Blog/blog/tags/cors/" style="font-size: 14px; color: #999">cors</a> <a href="/Blog/blog/tags/css/" style="font-size: 14px; color: #999">css</a> <a href="/Blog/blog/tags/express/" style="font-size: 14px; color: #999">express</a> <a href="/Blog/blog/tags/hexo/" style="font-size: 14px; color: #999">hexo</a> <a href="/Blog/blog/tags/node/" style="font-size: 14px; color: #999">node</a> <a href="/Blog/blog/tags/simpleui/" style="font-size: 14px; color: #999">simpleui</a> <a href="/Blog/blog/tags/uni-app/" style="font-size: 14px; color: #999">uni-app</a> <a href="/Blog/blog/tags/vue/" style="font-size: 14px; color: #999">vue</a> <a href="/Blog/blog/tags/yarn/" style="font-size: 14px; color: #999">yarn</a> <a href="/Blog/blog/tags/%E4%B9%90%E7%90%86/" style="font-size: 16.5px; color: #888">乐理</a> <a href="/Blog/blog/tags/%E5%89%8D%E7%AB%AF/" style="font-size: 14px; color: #999">前端</a> <a href="/Blog/blog/tags/%E7%AE%AD%E5%A4%B4%E5%87%BD%E6%95%B0/" style="font-size: 14px; color: #999">箭头函数</a>
     </div>
   </section>
 
