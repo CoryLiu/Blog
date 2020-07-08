@@ -4,6 +4,35 @@
   
     
     <entry>
+      <title>scss局部和全局样式</title>
+      <link href="/Blog/2020/07/08/scss%E5%B1%80%E9%83%A8%E5%92%8C%E5%85%A8%E5%B1%80%E6%A0%B7%E5%BC%8F/"/>
+      <url>/Blog/2020/07/08/scss%E5%B1%80%E9%83%A8%E5%92%8C%E5%85%A8%E5%B1%80%E6%A0%B7%E5%BC%8F/</url>
+      
+        <content type="html"><![CDATA[<h1 id="场景"><a href="#场景" class="headerlink" title="场景"></a>场景</h1><p>需求：vue框架，使用 <code>element-ui</code> ，编辑和查看使用同一个组件展示，在查看时给 <code>el-form</code> 添加一个     <code>disabled</code> 。会带上 disabled 的样式。<br>如果写在 scope 的样式里，不会生效。如果写在全局的样式里，会影响其他不需要重写 disabled 样式的组件。</p><h1 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h1><p>在外层元素添加一个id<br>再写样式即可</p><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">template</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"home"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">el-form</span> <span class="attr">:disabled</span>=<span class="string">"true"</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- 表单内容 --&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">el-form</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">style</span> <span class="attr">lang</span>=<span class="string">"scss"</span>&gt;</span></span><br><span class="line"><span class="css"><span class="selector-id">#home</span>&#123;</span></span><br><span class="line"><span class="css">  <span class="comment">/*此处写样式*/</span></span></span><br><span class="line">&#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> Coding </category>
+          
+          <category> Vue.js </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> scss </tag>
+            
+            <tag> vue </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>H5唤起APP的方式</title>
       <link href="/Blog/2020/06/18/H5%E5%94%A4%E8%B5%B7APP%E7%9A%84%E6%96%B9%E5%BC%8F/"/>
       <url>/Blog/2020/06/18/H5%E5%94%A4%E8%B5%B7APP%E7%9A%84%E6%96%B9%E5%BC%8F/</url>

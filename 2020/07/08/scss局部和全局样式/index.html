@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   
-  <title>Tag: hexo | 阿b的Blog</title>
+  <title>scss局部和全局样式 | 阿b的Blog</title>
   
   
 
@@ -48,7 +48,7 @@
   
   
   <div class="cover-wrapper">
-    <cover class='cover  half'>
+    <cover class='cover post half'>
       
         
   <h1 class='title'>阿b的Blog</h1>
@@ -280,25 +280,11 @@
 
   <div class="l_body">
     <div class='body-wrapper'>
-      
-<div class='l_main'>
+      <div class='l_main'>
   
+
+  <article id="post" class="post white-box article-type-post" itemscope itemprop="blogPost">
     
-      
-  <section class="post-list">
-    
-      
-        
-          
-        
-      
-    
-    
-      
-        
-          <div class='post-wrapper'>
-            <article class="post reveal ">
-  
 
 
   <section class='meta'>
@@ -307,11 +293,13 @@
     <div class="meta" id="header-meta">
       
         
-  <h2 class="title">
-    <a href="/Blog/2019/11/20/hexo%E5%86%99%E4%BD%9C%E5%91%BD%E4%BB%A4/">
-      hexo写作命令
-    </a>
-  </h2>
+  
+    <h1 class="title">
+      <a href="/Blog/2020/07/08/scss%E5%B1%80%E9%83%A8%E5%92%8C%E5%85%A8%E5%B1%80%E6%A0%B7%E5%BC%8F/">
+        scss局部和全局样式
+      </a>
+    </h1>
+  
 
 
       
@@ -339,7 +327,7 @@
             <div class="new-meta-item date">
   <a class='notlink'>
     <i class="fas fa-calendar-alt" aria-hidden="true"></i>
-    <p>2019-11-20</p>
+    <p>2020-07-08</p>
   </a>
 </div>
 
@@ -349,11 +337,29 @@
             
   
   <div class='new-meta-item category'>
-    <a href='/Blog/blog/categories/%E5%85%B3%E4%BA%8E%E5%8D%9A%E5%AE%A2/hexo%E5%91%BD%E4%BB%A4/' rel="nofollow">
+    <a href='/Blog/blog/categories/Coding/Vue-js/' rel="nofollow">
       <i class="fas fa-folder-open" aria-hidden="true"></i>
-      <p>关于博客&nbsp;/&nbsp;hexo命令</p>
+      <p>Coding&nbsp;/&nbsp;Vue.js</p>
     </a>
   </div>
+
+
+          
+        
+          
+            
+  
+    <div class="new-meta-item browse busuanzi">
+      <a class='notlink'>
+        <i class="fas fa-eye" aria-hidden="true"></i>
+        <p>
+          <span id="busuanzi_value_page_pv">
+            <i class="fas fa-spinner fa-spin fa-fw" aria-hidden="true"></i>
+          </span>
+        </p>
+      </a>
+    </div>
+  
 
 
           
@@ -371,77 +377,202 @@
   </section>
 
 
-  <section class="article typo">
-    <div class="article-entry" itemprop="articleBody">
-      <h1 id="新建文章"><a href="#新建文章" class="headerlink" title="新建文章"></a><strong>新建文章</strong></h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new [layout] &lt;title&gt;</span><br></pre></td></tr></table></figure>
+    <section class="article typo">
+      <div class="article-entry" itemprop="articleBody">
+        <h1 id="场景"><a href="#场景" class="headerlink" title="场景"></a>场景</h1><p>需求：vue框架，使用 <code>element-ui</code> ，编辑和查看使用同一个组件展示，在查看时给 <code>el-form</code> 添加一个     <code>disabled</code> 。会带上 disabled 的样式。<br>如果写在 scope 的样式里，不会生效。如果写在全局的样式里，会影响其他不需要重写 disabled 样式的组件。</p>
+<h1 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h1><p>在外层元素添加一个id<br>再写样式即可</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">template</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"home"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">el-form</span> <span class="attr">:disabled</span>=<span class="string">"true"</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- 表单内容 --&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">el-form</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">style</span> <span class="attr">lang</span>=<span class="string">"scss"</span>&gt;</span></span><br><span class="line"><span class="css"><span class="selector-id">#home</span>&#123;</span></span><br><span class="line"><span class="css">  <span class="comment">/*此处写样式*/</span></span></span><br><span class="line">&#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
-<p>layout : 默认为<code>post</code>，可以修改<code>_config.yml</code>中的<code>default_layout</code>参数来指定默认布局  </p>
-<h1 id="布局（Layout）"><a href="#布局（Layout）" class="headerlink" title="布局（Layout）"></a><strong>布局（Layout）</strong></h1><p>Hexo 有三种默认布局：<code>post</code>、<code>page</code> 和 <code>draft</code>。在创建这三种不同类型的文件时，它们将会被保存到不同的路径；而您自定义的其他布局和 <code>post</code> 相同，都将存储到 <code>source/_posts</code> 文件夹中。  </p>
-<table>
-<thead>
-<tr>
-<th><strong>布局</strong></th>
-<th><strong>路径</strong></th>
-</tr>
-</thead>
-<tbody><tr>
-<td><code>post</code></td>
-<td><code>source/_posts</code></td>
-</tr>
-<tr>
-<td><code>page</code></td>
-<td><code>source</code></td>
-</tr>
-<tr>
-<td><code>draft</code></td>
-<td><code>source/_drafts</code></td>
-</tr>
-</tbody></table>
-<blockquote>
-<p>如果不希望文章被处理，可以将 Front-Matter 中的 <code>layout:</code> 设为 <code>false</code>。</p>
-</blockquote>
-<h1 id="预览"><a href="#预览" class="headerlink" title="预览"></a><strong>预览</strong></h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+      </div>
       
-        <div class="readmore">
-          <a href="/Blog/2019/11/20/hexo%E5%86%99%E4%BD%9C%E5%91%BD%E4%BB%A4/" class="flat-box">
-            <i class="fas fa-book-open fa-fw" aria-hidden="true"></i>
-            阅读全文
-          </a>
-        </div>
+        <br>
+        
+
+
+  <section class='meta' id="footer-meta">
+    <div class='new-meta-box'>
+      
+        
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-07-08T09:33:31+00:00">
+  <a class='notlink'>
+    <i class="fas fa-clock" aria-hidden="true"></i>
+    <p>更新于 2020年7月8日</p>
+  </a>
+</div>
+
+        
+      
+        
+          
+  
+  <div class="new-meta-item meta-tags"><a class="tag" href="/Blog/blog/tags/scss/" rel="nofollow"><i class="fas fa-tag" aria-hidden="true"></i><p>scss</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/Blog/blog/tags/vue/" rel="nofollow"><i class="fas fa-tag" aria-hidden="true"></i><p>vue</p></a></div>
+
+
+        
+      
+        
+          
+  <div class="new-meta-item share -mob-share-list">
+  <div class="-mob-share-list share-body">
+    
+      
+        <a class="-mob-share-qq" title="QQ好友" rel="external nofollow noopener noreferrer"
+          
+          href="http://connect.qq.com/widget/shareqq/index.html?url=https://coryliu.github.io/Blog/2020/07/08/scss%E5%B1%80%E9%83%A8%E5%92%8C%E5%85%A8%E5%B1%80%E6%A0%B7%E5%BC%8F/&title=scss局部和全局样式 | 阿b的Blog&pics=https://cdn.jsdelivr.net/gh/CoryLiu/Img-repo@master/static_files/lyb/img/avatar微信图片_20191024112842.png&summary="
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/xaoxuu/assets@19.1.9/logo/128/qq.png">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-qzone" title="QQ空间" rel="external nofollow noopener noreferrer"
+          
+          href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://coryliu.github.io/Blog/2020/07/08/scss%E5%B1%80%E9%83%A8%E5%92%8C%E5%85%A8%E5%B1%80%E6%A0%B7%E5%BC%8F/&title=scss局部和全局样式 | 阿b的Blog&pics=https://cdn.jsdelivr.net/gh/CoryLiu/Img-repo@master/static_files/lyb/img/avatar微信图片_20191024112842.png&summary="
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/xaoxuu/assets@19.1.9/logo/128/qzone.png">
+          
+        </a>
+      
+    
+      
+        <a class='qrcode' rel="external nofollow noopener noreferrer" href='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAQ4AAAEOCAAAAABd2qZ5AAAD7ElEQVR42u3aS47iQBAFQO5/6R6pVy2NbN7LLCMW4RUyUFSFF0l+Xq/4+vm9/r7+e+fqM1fv/r/O1ZrJalcrXK124MKBAwcOHMFR7zd3/2MJRLJmwpS/vie7fAA4cODAgeMQRx5c75fbk+VxMP8rkIdwHDhw4MDxSY77beWhrk3P8seT7x8HDhw4cHwnx76k2JYC79NCHDhw4MDxPRxtSS4/3uxIm+Ljh2qlOHDgwIGj2/+r3dw3v358vgMHDhw4cAThZzZS0KZVSYsoD40/iwsHDhw4cOw52m3tE799mJ+NOxSfxIEDBw4ca47kqLMRhHbQIXk3H7A41gzDgQMHDhwxx6z1krdz2uO1YxOHAzkOHDhw4DiUEz0xuNBy3IfMdieb0iQOHDhw4NhwnCq6tQHy/tjPpYVv1seBAwcOHGuOTWK2T+rymuXswHlrDQcOHDhwnOLI2z/tiMPZwYU9R5Rk4sCBAweONUfS8snD2OwAs6Jhm+wV38KBAwcOHAuOPLBthgz2YwdJyG9TxDf9Nxw4cODAMeIYJjmL1lFO2T6ezaADDhw4cOA4y7E/fJvCtXfa/UcjC1dMOHDgwIHjEEcSa041pZLkMAnYCV++Jg4cOHDgeIKjDWybTbTJZBvahw8GBw4cOHAsOJ4eIGgHJvI1k+dcJ6U4cODAgWPNMWsgzcYO2gZV3ohKUsoaCwcOHDhwjDhWfmUZcR8mT60/zGVx4MCBA0fAsSnebVpBm4A9W7MuEeLAgQMHjgXHrCyYM7XBLy84tunibBQDBw4cOHC0HJtD5mlSknSdbTsl5UUcOHDgwHGWY9bgaZtV7dBDG1aTYmJ0Lhw4cODAsebIA2cebtsSXttAOlWajP534MCBAweORc7yRBmuPXzb9Mopo5QPBw4cOHCsOU4NGbQcs1GJtnGV76SmwYEDBw4ctznLvjmUJ2Ataxv+81CKAwcOHDie48hH3GaDdHlozAt/s0dYN5xw4MCBA0fJsRmMS1KyPVk70NAO20WJJQ4cOHDgiDnyJlA7rNbStM2hNpRGgRkHDhw4cBziyMNkfj9P2PJEsU3n2nPhwIEDB449R3K8zaDbbIYiOV4b5uv8FQcOHDhwjDhmwSxPz061r/J1Zu2lNxktDhw4cOCIOfKrDZntJvIi4KwltsHCgQMHDhwtx2YcbdNGygt8Seid/W6dyOHAgQMHjphjEwhXMXxRIhwmYLNeHA4cOHDgeIAjv5MXGU+1o9q9XaLgwIEDB46Pc7Sjae3Ks7Qwp3kTqnHgwIEDxyGOtjjYJlebAJx8su2zHW474cCBAweOxUBDvol9Tyfn26d5OHDgwIFjzfEP1moBkwC/b28AAAAASUVORK5CYII='>
+        
+          <img src="https://cdn.jsdelivr.net/gh/xaoxuu/assets@19.1.9/logo/128/wechat.png">
+        
+        </a>
+      
+    
+      
+        <a class="-mob-share-weibo" title="微博" rel="external nofollow noopener noreferrer"
+          
+          href="http://service.weibo.com/share/share.php?url=https://coryliu.github.io/Blog/2020/07/08/scss%E5%B1%80%E9%83%A8%E5%92%8C%E5%85%A8%E5%B1%80%E6%A0%B7%E5%BC%8F/&title=scss局部和全局样式 | 阿b的Blog&pics=https://cdn.jsdelivr.net/gh/CoryLiu/Img-repo@master/static_files/lyb/img/avatar微信图片_20191024112842.png&summary="
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/xaoxuu/assets@19.1.9/logo/128/weibo.png">
+          
+        </a>
+      
+    
+  </div>
+</div>
+
+
+
+        
       
     </div>
-    
-      <div class="full-width auto-padding tags">
-        
-          <a href="/Blog/blog/tags/hexo/" rel="nofollow"><i class="fas fa-tag fa-fw"></i> hexo</a>
-        
-      </div>
-    
   </section>
-</article>
 
-          </div>
-        
+
       
-    
-  </section>
-  
-    
-    <!-- 根据主题中的设置决定是否在archive中针对摘要部分的MathJax公式加载mathjax.js文件 -->
-    
-    
+      
+          <div class="prev-next">
+              
+              
+                  <section class="next">
+                      <span class="art-item-right" aria-hidden="true">
+                          <h6>下一页&nbsp;<i class="fas fa-chevron-right" aria-hidden="true"></i></h6>
+                          <h4>
+                              <a href="/Blog/2020/06/18/H5%E5%94%A4%E8%B5%B7APP%E7%9A%84%E6%96%B9%E5%BC%8F/" rel="prev" title="H5唤起APP的方式">
+                                  
+                                      H5唤起APP的方式
+                                  
+                              </a>
+                          </h4>
+                          
+                              
+                              <h6 class="tags">
+                                  <a class="tag" href="/Blog/blog/tags/Html5/"><i class="fas fa-tag fa-fw" aria-hidden="true"></i> Html5</a> <a class="tag" href="/Blog/blog/tags/Scheme/"><i class="fas fa-tag fa-fw" aria-hidden="true"></i> Scheme</a>
+                              </h6>
+                          
+                      </span>
+                  </section>
+              
+          </div>
+      
+    </section>
+  </article>
+
+
+
+  <!-- 显示推荐文章和评论 -->
+
+
 
   
 
 
-    
-  
+
+
+
+
+<!-- 根据页面mathjax变量决定是否加载MathJax数学公式js -->
+
+
+
+  <script>
+    window.subData = {
+      title: 'scss局部和全局样式',
+      tools: true
+    }
+  </script>
+
+
 </div>
 <aside class='l_side'>
   
     
     
       
+      
+        
+          
+          
+        
+          
+          
+            
+              
+  <section class='widget toc-wrapper'>
+    
+<header class='pure'>
+  <div><i class="fas fa-list fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;本文目录</div>
+  
+    <!-- <div class='wrapper'><a class="s-toc rightBtn" rel="external nofollow noopener noreferrer" href="javascript:void(0)"><i class="fas fa-thumbtack fa-fw"></i></a></div> -->
+  
+</header>
+
+    <div class='content pure'>
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#场景"><span class="toc-text">场景</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#解决方案"><span class="toc-text">解决方案</span></a></li></ol>
+    </div>
+  </section>
+
+
+            
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
       
         
           
@@ -666,6 +797,114 @@
         
           
           
+            
+              <section class='widget grid'>
+  
+<header class='pure'>
+  <div><i class="fas fa-map-signs fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;站内导航</div>
+  
+</header>
+
+  <div class='content pure'>
+    <ul class="grid navgation">
+      
+        <li><a class="flat-box" title="/Blog/" href="/Blog/"
+          
+          
+          id="Blog">
+          
+            <i class="fas fa-clock fa-fw" aria-hidden="true"></i>
+          
+          近期文章
+        </a></li>
+      
+        <li><a class="flat-box" title="/Blog/blog/archives/" href="/Blog/blog/archives/"
+          
+            rel="nofollow"
+          
+          
+          id="Blogblogarchives">
+          
+            <i class="fas fa-archive fa-fw" aria-hidden="true"></i>
+          
+          文章归档
+        </a></li>
+      
+        <li><a class="flat-box" title="/Blog/projects/" href="/Blog/projects/"
+          
+          
+          id="Blogprojects">
+          
+            <i class="fas fa-code-branch fa-fw" aria-hidden="true"></i>
+          
+          开源项目
+        </a></li>
+      
+        <li><a class="flat-box" title="/Blog/friends/" href="/Blog/friends/"
+          
+            rel="nofollow"
+          
+          
+          id="Blogfriends">
+          
+            <i class="fas fa-link fa-fw" aria-hidden="true"></i>
+          
+          我的友链
+        </a></li>
+      
+        <li><a class="flat-box" title="https://xaoxuu.com/wiki/material-x/" href="https://xaoxuu.com/wiki/material-x/"
+          
+            rel="nofollow"
+          
+          
+          id="https:xaoxuu.comwikimaterial-x">
+          
+            <i class="fas fa-book fa-fw" aria-hidden="true"></i>
+          
+          主题文档
+        </a></li>
+      
+        <li><a class="flat-box" title="/Blog/about/" href="/Blog/about/"
+          
+            rel="nofollow"
+          
+          
+          id="Blogabout">
+          
+            <i class="fas fa-info-circle fa-fw" aria-hidden="true"></i>
+          
+          关于小站
+        </a></li>
+      
+    </ul>
+  </div>
+</section>
+
+            
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+      
+        
+          
+          
+        
+          
+          
+        
+          
+          
         
           
           
@@ -770,91 +1009,6 @@
           
         
           
-          
-            
-              <section class='widget grid'>
-  
-<header class='pure'>
-  <div><i class="fas fa-map-signs fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;站内导航</div>
-  
-</header>
-
-  <div class='content pure'>
-    <ul class="grid navgation">
-      
-        <li><a class="flat-box" title="/Blog/" href="/Blog/"
-          
-          
-          id="Blog">
-          
-            <i class="fas fa-clock fa-fw" aria-hidden="true"></i>
-          
-          近期文章
-        </a></li>
-      
-        <li><a class="flat-box" title="/Blog/blog/archives/" href="/Blog/blog/archives/"
-          
-            rel="nofollow"
-          
-          
-          id="Blogblogarchives">
-          
-            <i class="fas fa-archive fa-fw" aria-hidden="true"></i>
-          
-          文章归档
-        </a></li>
-      
-        <li><a class="flat-box" title="/Blog/projects/" href="/Blog/projects/"
-          
-          
-          id="Blogprojects">
-          
-            <i class="fas fa-code-branch fa-fw" aria-hidden="true"></i>
-          
-          开源项目
-        </a></li>
-      
-        <li><a class="flat-box" title="/Blog/friends/" href="/Blog/friends/"
-          
-            rel="nofollow"
-          
-          
-          id="Blogfriends">
-          
-            <i class="fas fa-link fa-fw" aria-hidden="true"></i>
-          
-          我的友链
-        </a></li>
-      
-        <li><a class="flat-box" title="https://xaoxuu.com/wiki/material-x/" href="https://xaoxuu.com/wiki/material-x/"
-          
-            rel="nofollow"
-          
-          
-          id="https:xaoxuu.comwikimaterial-x">
-          
-            <i class="fas fa-book fa-fw" aria-hidden="true"></i>
-          
-          主题文档
-        </a></li>
-      
-        <li><a class="flat-box" title="/Blog/about/" href="/Blog/about/"
-          
-            rel="nofollow"
-          
-          
-          id="Blogabout">
-          
-            <i class="fas fa-info-circle fa-fw" aria-hidden="true"></i>
-          
-          关于小站
-        </a></li>
-      
-    </ul>
-  </div>
-</section>
-
-            
           
         
           
