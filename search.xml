@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>git stash的使用</title>
+      <link href="/Blog/2020/07/10/git-stash%E7%9A%84%E4%BD%BF%E7%94%A8/"/>
+      <url>/Blog/2020/07/10/git-stash%E7%9A%84%E4%BD%BF%E7%94%A8/</url>
+      
+        <content type="html"><![CDATA[<h2 id="暂时保存现状的操作"><a href="#暂时保存现状的操作" class="headerlink" title="暂时保存现状的操作"></a>暂时保存现状的操作</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git stash save <span class="string">"write some save message"</span></span><br></pre></td></tr></table></figure><a id="more"></a><h2 id="显示暂存列表"><a href="#显示暂存列表" class="headerlink" title="显示暂存列表"></a>显示暂存列表</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git stash list</span><br></pre></td></tr></table></figure><h2 id="恢复暂存的操作"><a href="#恢复暂存的操作" class="headerlink" title="恢复暂存的操作"></a>恢复暂存的操作</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git stash pop</span><br></pre></td></tr></table></figure><p>如果不指定参数，在对比操作中可以复原到最新的操作。指定类似stash@{1}的参数，可以复原特定的操作。</p><h2 id="删除暂存的操作"><a href="#删除暂存的操作" class="headerlink" title="删除暂存的操作"></a>删除暂存的操作</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git stash drop</span><br></pre></td></tr></table></figure><p>如果不指定参数，在对比操作中会删除最新的操作。指定类似stash@{1}的参数，可以删除特定的操作。</p><h2 id="删除所有暂存的操作"><a href="#删除所有暂存的操作" class="headerlink" title="删除所有暂存的操作"></a>删除所有暂存的操作</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git stash clear</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> Coding </category>
+          
+          <category> git </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> git </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>scss局部和全局样式</title>
       <link href="/Blog/2020/07/08/scss%E5%B1%80%E9%83%A8%E5%92%8C%E5%85%A8%E5%B1%80%E6%A0%B7%E5%BC%8F/"/>
       <url>/Blog/2020/07/08/scss%E5%B1%80%E9%83%A8%E5%92%8C%E5%85%A8%E5%B1%80%E6%A0%B7%E5%BC%8F/</url>

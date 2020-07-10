@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   
-  <title>hexo写作命令 | 阿b的Blog</title>
+  <title>git stash的使用 | 阿b的Blog</title>
   
   
 
@@ -295,8 +295,8 @@
         
   
     <h1 class="title">
-      <a href="/Blog/2019/11/20/hexo%E5%86%99%E4%BD%9C%E5%91%BD%E4%BB%A4/">
-        hexo写作命令
+      <a href="/Blog/2020/07/10/git-stash%E7%9A%84%E4%BD%BF%E7%94%A8/">
+        git stash的使用
       </a>
     </h1>
   
@@ -327,7 +327,7 @@
             <div class="new-meta-item date">
   <a class='notlink'>
     <i class="fas fa-calendar-alt" aria-hidden="true"></i>
-    <p>2019-11-20</p>
+    <p>2020-07-10</p>
   </a>
 </div>
 
@@ -337,9 +337,9 @@
             
   
   <div class='new-meta-item category'>
-    <a href='/Blog/blog/categories/%E5%85%B3%E4%BA%8E%E5%8D%9A%E5%AE%A2/hexo%E5%91%BD%E4%BB%A4/' rel="nofollow">
+    <a href='/Blog/blog/categories/Coding/git/' rel="nofollow">
       <i class="fas fa-folder-open" aria-hidden="true"></i>
-      <p>关于博客&nbsp;/&nbsp;hexo命令</p>
+      <p>Coding&nbsp;/&nbsp;git</p>
     </a>
   </div>
 
@@ -379,36 +379,18 @@
 
     <section class="article typo">
       <div class="article-entry" itemprop="articleBody">
-        <h1 id="新建文章"><a href="#新建文章" class="headerlink" title="新建文章"></a><strong>新建文章</strong></h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new [layout] &lt;title&gt;</span><br></pre></td></tr></table></figure>
-
-<p>layout : 默认为<code>post</code>，可以修改<code>_config.yml</code>中的<code>default_layout</code>参数来指定默认布局  </p>
-<h1 id="布局（Layout）"><a href="#布局（Layout）" class="headerlink" title="布局（Layout）"></a><strong>布局（Layout）</strong></h1><p>Hexo 有三种默认布局：<code>post</code>、<code>page</code> 和 <code>draft</code>。在创建这三种不同类型的文件时，它们将会被保存到不同的路径；而您自定义的其他布局和 <code>post</code> 相同，都将存储到 <code>source/_posts</code> 文件夹中。  </p>
-<table>
-<thead>
-<tr>
-<th><strong>布局</strong></th>
-<th><strong>路径</strong></th>
-</tr>
-</thead>
-<tbody><tr>
-<td><code>post</code></td>
-<td><code>source/_posts</code></td>
-</tr>
-<tr>
-<td><code>page</code></td>
-<td><code>source</code></td>
-</tr>
-<tr>
-<td><code>draft</code></td>
-<td><code>source/_drafts</code></td>
-</tr>
-</tbody></table>
-<blockquote>
-<p>如果不希望文章被处理，可以将 Front-Matter 中的 <code>layout:</code> 设为 <code>false</code>。</p>
-</blockquote>
-<h1 id="预览"><a href="#预览" class="headerlink" title="预览"></a><strong>预览</strong></h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
+        <h2 id="暂时保存现状的操作"><a href="#暂时保存现状的操作" class="headerlink" title="暂时保存现状的操作"></a>暂时保存现状的操作</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git stash save <span class="string">"write some save message"</span></span><br></pre></td></tr></table></figure>
 <a id="more"></a>
+<h2 id="显示暂存列表"><a href="#显示暂存列表" class="headerlink" title="显示暂存列表"></a>显示暂存列表</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git stash list</span><br></pre></td></tr></table></figure>
+
+<h2 id="恢复暂存的操作"><a href="#恢复暂存的操作" class="headerlink" title="恢复暂存的操作"></a>恢复暂存的操作</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git stash pop</span><br></pre></td></tr></table></figure>
+<p>如果不指定参数，在对比操作中可以复原到最新的操作。指定类似stash@{1}的参数，可以复原特定的操作。</p>
+<h2 id="删除暂存的操作"><a href="#删除暂存的操作" class="headerlink" title="删除暂存的操作"></a>删除暂存的操作</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git stash drop</span><br></pre></td></tr></table></figure>
+<p>如果不指定参数，在对比操作中会删除最新的操作。指定类似stash@{1}的参数，可以删除特定的操作。</p>
+<h2 id="删除所有暂存的操作"><a href="#删除所有暂存的操作" class="headerlink" title="删除所有暂存的操作"></a>删除所有暂存的操作</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git stash clear</span><br></pre></td></tr></table></figure>
+
+
+
       </div>
       
         <br>
@@ -431,7 +413,7 @@
         
           
   
-  <div class="new-meta-item meta-tags"><a class="tag" href="/Blog/blog/tags/hexo/" rel="nofollow"><i class="fas fa-tag" aria-hidden="true"></i><p>hexo</p></a></div>
+  <div class="new-meta-item meta-tags"><a class="tag" href="/Blog/blog/tags/git/" rel="nofollow"><i class="fas fa-tag" aria-hidden="true"></i><p>git</p></a></div>
 
 
         
@@ -444,34 +426,7 @@
       
         <a class="-mob-share-qq" title="QQ好友" rel="external nofollow noopener noreferrer"
           
-          href="http://connect.qq.com/widget/shareqq/index.html?url=https://coryliu.github.io/Blog/2019/11/20/hexo%E5%86%99%E4%BD%9C%E5%91%BD%E4%BB%A4/&title=hexo写作命令 | 阿b的Blog&pics=https://cdn.jsdelivr.net/gh/CoryLiu/Img-repo@master/static_files/lyb/img/avatar微信图片_20191024112842.png&summary=新建文章1$ hexo new [layout] &lt;title&gt;
-
-layout : 默认为post，可以修改_config.yml中的default_layout参数来指定默认布局  
-布局（Layout）Hexo 有三种默认布局：post、page 和 draft。在创建这三种不同类型的文件时，它们将会被保存到不同的路径；而您自定义的其他布局和 post 相同，都将存储到 source/_posts 文件夹中。  
-
-
-
-布局
-路径
-
-
-
-post
-source/_posts
-
-
-page
-source
-
-
-draft
-source/_drafts
-
-
-
-如果不希望文章被处理，可以将 Front-Matter 中的 layout: 设为 false。
-
-预览1$ hexo server"
+          href="http://connect.qq.com/widget/shareqq/index.html?url=https://coryliu.github.io/Blog/2020/07/10/git-stash%E7%9A%84%E4%BD%BF%E7%94%A8/&title=git stash的使用 | 阿b的Blog&pics=https://cdn.jsdelivr.net/gh/CoryLiu/Img-repo@master/static_files/lyb/img/avatar微信图片_20191024112842.png&summary=暂时保存现状的操作1$ git stash save "write some save message""
           
           >
           
@@ -483,34 +438,7 @@ source/_drafts
       
         <a class="-mob-share-qzone" title="QQ空间" rel="external nofollow noopener noreferrer"
           
-          href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://coryliu.github.io/Blog/2019/11/20/hexo%E5%86%99%E4%BD%9C%E5%91%BD%E4%BB%A4/&title=hexo写作命令 | 阿b的Blog&pics=https://cdn.jsdelivr.net/gh/CoryLiu/Img-repo@master/static_files/lyb/img/avatar微信图片_20191024112842.png&summary=新建文章1$ hexo new [layout] &lt;title&gt;
-
-layout : 默认为post，可以修改_config.yml中的default_layout参数来指定默认布局  
-布局（Layout）Hexo 有三种默认布局：post、page 和 draft。在创建这三种不同类型的文件时，它们将会被保存到不同的路径；而您自定义的其他布局和 post 相同，都将存储到 source/_posts 文件夹中。  
-
-
-
-布局
-路径
-
-
-
-post
-source/_posts
-
-
-page
-source
-
-
-draft
-source/_drafts
-
-
-
-如果不希望文章被处理，可以将 Front-Matter 中的 layout: 设为 false。
-
-预览1$ hexo server"
+          href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://coryliu.github.io/Blog/2020/07/10/git-stash%E7%9A%84%E4%BD%BF%E7%94%A8/&title=git stash的使用 | 阿b的Blog&pics=https://cdn.jsdelivr.net/gh/CoryLiu/Img-repo@master/static_files/lyb/img/avatar微信图片_20191024112842.png&summary=暂时保存现状的操作1$ git stash save "write some save message""
           
           >
           
@@ -520,7 +448,7 @@ source/_drafts
       
     
       
-        <a class='qrcode' rel="external nofollow noopener noreferrer" href='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPYAAAD2CAAAAADAeSUUAAADKUlEQVR42u3aQW7jQAwEwPz/097rAoGV7uEkkEelk5GNJdUEWIJsfn3F1+u/6/vPk+8m3/r+lO+fr39n84WNjY39IezX5ZXcOvnWu399d6DXR5Yfzdv7Y2NjYx/Hvn7k9RFcv3pb8JKyl7/b259jY2NjP5jd4tsCmfwmNjY2NvYaO28kktYlf2JyoNjY2NjYk7Kxt4XIwX80S8PGxsa+Pbsd8dz586/k29jY2Ng3Zr/Ka3I0eTPTjqVqBTY2NvZB7MnKznytJx9F7YqcsbGxsZ/ATkb/15i1dZy2pM0jYWxsbOwz2Pl/923EO29Lkjvk74mNjY39BPbmkc24wUgKUrsehI2NjX0euy1O+a3XSLs+RwpsbGzsg9jtIuacOimNxbRs1xIPNjY29u3ZeQuRtBx5Y5D/Tpt4RDEDNjY29kHstZXHZNCTtxxrpS4aHk3OGBsbG/tj2ckIvh05rYUKuyJebGxs7FPZOW9yEPlAqo1yN0S82NjY2Eez20hgbcCUtBBrWQc2Njb2E9iToDc/iKQ4/d4qT9SNYWNjY38se9fgvi0kLT5vjaKWBhsbG/sgdj64aTOHtTihLZntgAkbGxv7VHY7js+7nL2lq/0z/HBnbGxs7CPYyUJMS83L0mSJZ+1u2NjY2Oex28WavBVZK4drz13742FjY2OfxE7KwFownDQJ7cJQ+7bY2NjYz2G3j5wMpPL7zwsbNjY29tnsfEyTH9CkFZm/T3RhY2NjH8duF2va48sL4aSwFQUSGxsb+yB2HsQmLzEZ9+dNTjuKGuXP2NjY2B/CbgtJ234k46pdkXAbb2BjY2OfwV4La9uAdu1okoK3+G7Y2NjYx7HXHt+2De3EPm9UEjA2Njb2eexXeeVhbVta1kLovE1arNjY2NjYt2fvinLn65trgW7eCP3pThM2Njb2n7OTotWWkLXQNy+NG5oWbGxs7OPY9SwqXuJZW6yZD6p++C42Njb2g9mTQtWu4LTlMxdhY2NjP5m9NvTZO75fC5KxsbGxz2bPA4C8OWlD3F2Dp82zNGxsbOzbsPMC0AauSTMz36K5PpTRQAobGxv77ux/oAKbp/+dhB4AAAAASUVORK5CYII='>
+        <a class='qrcode' rel="external nofollow noopener noreferrer" href='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPYAAAD2CAAAAADAeSUUAAADLUlEQVR42u3aQY7CQAwEQP7/afa6EkrStrMS8VZOiKAwNRyM3fN6xdf71/X5zuf7R084f330+fPnHH3yhgsbGxv7Iez36ZUgc8bn3aMnJ+s834iLJ2NjY2OvY+clZ1JUkrtH35iUwEI5xMbGxv7H7N7n7yqB80YIGxsbGztf7mTKlbQT2NjY2NjVoVISFfRamurQPx9+3TBLw8bGxv56dl5Ovv/1n+Tb2NjY2F/Mfhev5DnJ3Xzk1FvnhQIbGxt7ETsvAMnSz4c41ZAgDwZ668fGxsbex57/0Z8Mhqrj/kkgjY2Njf3f2Pceo6k2G3k4UY6KsbGxsRexe1/fK0iT4teLbKPPY2NjYz+cPQ9WJ6FCL3LIS+bhd2FjY2MvYud/6OfDoEkrMt9KbGxs7K3s/NBMXngm4/68TE7GW9jY2Nib2H8Xu1YD4PxAT954FIIBbGxs7Aeyk/i2CpvHD5OYOfoJsbGxsZeyJ4OeagHLB0/3tkavvPphY2NjP4o9OTQ5oZ6PgSbHNy/aG2xsbOx17OpwP19uPirKo9xqc3JRt7GxsbEfzq5GpHeNeybtR+/uYb6NjY2N/XB2/qc/v3pHcPJ3kicUhkrY2NjYS9mTFiVfYl66qmXs4snY2NjY69jV8U1vAJQ3OdWDONXRFTY2NvYmdj4YyrcmL2O9QlUNG0YJAzY2NvZD2L3RT3Wh85i2WvwKPx42Njb2Cnb1ccnAqBcz5CuctEDY2NjY+9h5UzEJhvMSmG9rNX7AxsbG3sfu/cXvNQx5SDAvja+8vmFjY2MvYudjmjyOzYtfbwvynwcbGxt7N7sKq45vqkdtqu1NObrGxsbGXseufkF1EdXRf35Yp9pxYGNjY+9m5yXtruM495auQtSBjY2NvYLdO0zTG/RP5jm9ZubwCdjY2NiL2Pk1KRvzBqMXOUwaGGxsbOxnsfOilTchvcF9ftCnFzCUz/tgY2NjP4p9V2GoBgm9kVZeSrGxsbGx8y2oNi29CCHZ7qi8YWNjY2MH4GpgXN2sURnDxsbGXseeNAz5wZokAM6bnOqhImxsbOyt7EmTcO+Ivxo5zzcFGxsb++HsH/SS41/npB7lAAAAAElFTkSuQmCC'>
         
           <img src="https://cdn.jsdelivr.net/gh/xaoxuu/assets@19.1.9/logo/128/wechat.png">
         
@@ -530,34 +458,7 @@ source/_drafts
       
         <a class="-mob-share-weibo" title="微博" rel="external nofollow noopener noreferrer"
           
-          href="http://service.weibo.com/share/share.php?url=https://coryliu.github.io/Blog/2019/11/20/hexo%E5%86%99%E4%BD%9C%E5%91%BD%E4%BB%A4/&title=hexo写作命令 | 阿b的Blog&pics=https://cdn.jsdelivr.net/gh/CoryLiu/Img-repo@master/static_files/lyb/img/avatar微信图片_20191024112842.png&summary=新建文章1$ hexo new [layout] &lt;title&gt;
-
-layout : 默认为post，可以修改_config.yml中的default_layout参数来指定默认布局  
-布局（Layout）Hexo 有三种默认布局：post、page 和 draft。在创建这三种不同类型的文件时，它们将会被保存到不同的路径；而您自定义的其他布局和 post 相同，都将存储到 source/_posts 文件夹中。  
-
-
-
-布局
-路径
-
-
-
-post
-source/_posts
-
-
-page
-source
-
-
-draft
-source/_drafts
-
-
-
-如果不希望文章被处理，可以将 Front-Matter 中的 layout: 设为 false。
-
-预览1$ hexo server"
+          href="http://service.weibo.com/share/share.php?url=https://coryliu.github.io/Blog/2020/07/10/git-stash%E7%9A%84%E4%BD%BF%E7%94%A8/&title=git stash的使用 | 阿b的Blog&pics=https://cdn.jsdelivr.net/gh/CoryLiu/Img-repo@master/static_files/lyb/img/avatar微信图片_20191024112842.png&summary=暂时保存现状的操作1$ git stash save "write some save message""
           
           >
           
@@ -581,40 +482,21 @@ source/_drafts
       
           <div class="prev-next">
               
-                  <section class="prev">
-                      <span class="art-item-left">
-                          <h6><i class="fas fa-chevron-left" aria-hidden="true"></i>&nbsp;上一页</h6>
-                          <h4>
-                              <a href="/Blog/2019/11/20/uni-app%E5%AF%BC%E8%88%AA%E6%A0%8F%E5%BC%80%E5%8F%91%E6%8C%87%E5%8D%97/" rel="prev" title="uni-app导航栏开发指南">
-                                
-                                    uni-app导航栏开发指南
-                                
-                              </a>
-                          </h4>
-                          
-                              
-                              <h6 class="tags">
-                                  <a class="tag" href="/Blog/blog/tags/uni-app/"><i class="fas fa-tag fa-fw" aria-hidden="true"></i> uni-app</a>
-                              </h6>
-                          
-                      </span>
-                  </section>
-              
               
                   <section class="next">
                       <span class="art-item-right" aria-hidden="true">
                           <h6>下一页&nbsp;<i class="fas fa-chevron-right" aria-hidden="true"></i></h6>
                           <h4>
-                              <a href="/Blog/2019/10/24/Nginx-uwsgi-CentOS7%E9%83%A8%E7%BD%B2Django/" rel="prev" title="Nginx+uwsgi+CentOS7部署Django">
+                              <a href="/Blog/2020/07/08/scss%E5%B1%80%E9%83%A8%E5%92%8C%E5%85%A8%E5%B1%80%E6%A0%B7%E5%BC%8F/" rel="prev" title="scss局部和全局样式">
                                   
-                                      Nginx+uwsgi+CentOS7部署Django
+                                      scss局部和全局样式
                                   
                               </a>
                           </h4>
                           
                               
                               <h6 class="tags">
-                                  <a class="tag" href="/Blog/blog/tags/Django/"><i class="fas fa-tag fa-fw" aria-hidden="true"></i> Django</a>
+                                  <a class="tag" href="/Blog/blog/tags/scss/"><i class="fas fa-tag fa-fw" aria-hidden="true"></i> scss</a> <a class="tag" href="/Blog/blog/tags/vue/"><i class="fas fa-tag fa-fw" aria-hidden="true"></i> vue</a>
                               </h6>
                           
                       </span>
@@ -644,7 +526,7 @@ source/_drafts
 
   <script>
     window.subData = {
-      title: 'hexo写作命令',
+      title: 'git stash的使用',
       tools: true
     }
   </script>
@@ -675,7 +557,7 @@ source/_drafts
 </header>
 
     <div class='content pure'>
-      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#新建文章"><span class="toc-text">新建文章</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#布局（Layout）"><span class="toc-text">布局（Layout）</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#预览"><span class="toc-text">预览</span></a></li></ol>
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#暂时保存现状的操作"><span class="toc-text">暂时保存现状的操作</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#显示暂存列表"><span class="toc-text">显示暂存列表</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#恢复暂存的操作"><span class="toc-text">恢复暂存的操作</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#删除暂存的操作"><span class="toc-text">删除暂存的操作</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#删除所有暂存的操作"><span class="toc-text">删除所有暂存的操作</span></a></li></ol>
     </div>
   </section>
 
