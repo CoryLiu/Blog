@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>css命名规范</title>
+      <link href="/Blog/2020/10/27/css%E5%91%BD%E5%90%8D%E8%A7%84%E8%8C%83/"/>
+      <url>/Blog/2020/10/27/css%E5%91%BD%E5%90%8D%E8%A7%84%E8%8C%83/</url>
+      
+        <content type="html"><![CDATA[<h1 id="文本命名规范"><a href="#文本命名规范" class="headerlink" title="文本命名规范"></a>文本命名规范</h1><p>index.css： 一般用于首页建立样式<br>head.css： 头部样式，当多个页面头部设计风格相同时使用。<br>base.css： 共用样式。<br>style.css：独立页面所使用的样式文件。<br>global.css：页面样式基础，全局公用样式，页面中必须包含。<br>layout.css：布局、版面样式，公用类型较多时使用，一般用在首页级页面和产品类页面中<br>module.css：模块，用于产品类页，也可与其它样式配合使用。<br>master.css：主要的样式表<br>columns.css：专栏样式<br>themes.css：主体样式<br>forms.css：表单样式<br>mend.css：补丁，基于以上样式进行的私有化修补。  </p><h1 id="页面结构命名"><a href="#页面结构命名" class="headerlink" title="页面结构命名"></a>页面结构命名</h1><p>page：代表整个页面，用于最外层。<br>wrap：外套，将所有元素包在一起的一个外围包，用于最外层<br>wrapper：页面外围控制整体布局宽度，用于最外层<br>container：一个整体容器，用于最外层<br>head，header：页头区域，用于头部<br>nav: 导航条<br>content：内容，网站中最重要的内容区域，用于网页中部主体<br>main：网站中的主要区域（表示最重要的一块位置），用于中部主体内容<br>column：栏目<br>sidebar：侧栏<br>foot，footer：页尾、页脚。网站一些附加信息放置区域，（或命名为 copyright）用于底部</p><h1 id="导航命名"><a href="#导航命名" class="headerlink" title="导航命名"></a>导航命名</h1><p>nav, navbar, navigation, nav-wrapper：导航条或导航包，代表横向导航<br>topnav：顶部导航<br>mainbav：主导航<br>subnav：子导航<br>sidebar：边导航<br>leftsidebar 或 sidebar_a：左导航<br>rightsidebar 或 sidebar_b：右导航<br>title：标题<br>summary：摘要<br>menu：菜单，区域包含一般的链接和菜单<br>submenu：子菜单<br>drop：下拉<br>dorpmenu：下拉菜单<br>links：链接菜单  </p><h1 id="功能命名"><a href="#功能命名" class="headerlink" title="功能命名"></a>功能命名</h1><p>logo：标记网站logo标志<br>banner：标语、广告条、顶部广告条<br>login：登陆，（例如登录表单：form-login）<br>loginbar：登录条<br>register：注册<br>tool, toolbar：工具条<br>search：搜索<br>searchbar：搜索条<br>searchlnput：搜索输入框<br>shop：功能区，表示现在的<br>icon：小图标<br>label：商标<br>homepage：首页<br>subpage：二级页面子页面<br>hot：热门热点<br>list：文章列表，（例如：新闻列表：list-news）<br>scroll：滚动<br>tab：标签<br>sitemap：网站地图<br>msg 或 message：提示信息<br>current：当前的<br>joinus：加入<br>status：状态<br>btn：按钮，（例如：搜索按钮可写成：btn-search）<br>tips：小技巧<br>note：注释<br>guild：指南<br>arr, arrow：标记箭头<br>service：服务<br>breadcrumb：(即页面所处位置导航提示）<br>download：下载<br>vote：投票<br>siteinfo：网站信息<br>partner：合作伙伴<br>link, friendlink：友情链接<br>copyright：版权信息<br>siteinfoCredits：信誉<br>siteinfoLegal：法律信息  </p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Coding </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> css </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>避免git pull时产生多余的merge记录</title>
       <link href="/Blog/2020/10/19/%E9%81%BF%E5%85%8Dgit-pull%E6%97%B6%E4%BA%A7%E7%94%9F%E5%A4%9A%E4%BD%99%E7%9A%84merge%E8%AE%B0%E5%BD%95/"/>
       <url>/Blog/2020/10/19/%E9%81%BF%E5%85%8Dgit-pull%E6%97%B6%E4%BA%A7%E7%94%9F%E5%A4%9A%E4%BD%99%E7%9A%84merge%E8%AE%B0%E5%BD%95/</url>
