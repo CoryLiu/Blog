@@ -4,6 +4,27 @@
   
     
     <entry>
+      <title>cocos计划</title>
+      <link href="/Blog/2021/02/22/2021/cocos%E8%AE%A1%E5%88%92/"/>
+      <url>/Blog/2021/02/22/2021/cocos%E8%AE%A1%E5%88%92/</url>
+      
+        <content type="html"><![CDATA[<h2 id="重启cocos计划"><a href="#重启cocos计划" class="headerlink" title="重启cocos计划"></a>重启cocos计划</h2>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> cocos creator3.0 </tag>
+            
+            <tag> TypeScript </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>css命名规范</title>
       <link href="/Blog/2020/10/27/css%E5%91%BD%E5%90%8D%E8%A7%84%E8%8C%83/"/>
       <url>/Blog/2020/10/27/css%E5%91%BD%E5%90%8D%E8%A7%84%E8%8C%83/</url>
@@ -763,33 +784,6 @@
             <tag> ES6 </tag>
             
             <tag> 箭头函数 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>vue生命周期</title>
-      <link href="/Blog/2019/11/21/vue%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/"/>
-      <url>/Blog/2019/11/21/vue%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/</url>
-      
-        <content type="html"><![CDATA[]]></content>
-      
-      
-      <categories>
-          
-          <category> Coding </category>
-          
-          <category> Vue.js </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> Vue </tag>
             
         </tags>
       
